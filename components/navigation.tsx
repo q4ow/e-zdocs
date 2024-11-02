@@ -1,13 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Code2, BookOpen, Settings, ExternalLink, ChevronLeft } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ezLogo from "../public/assets/e-z.svg";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  Code2,
+  BookOpen,
+  Settings,
+  ExternalLink,
+  ChevronLeft,
+  Users
+} from "lucide-react";
 
 const menuItems = [
   {
@@ -36,6 +43,11 @@ const menuItems = [
       { name: "Basic Setup", href: "/docs/config/basic-setup" },
       { name: "Advanced", href: "/docs/config/advanced" },
     ],
+  },
+  {
+    name: "E-Z Bio",
+    href: "/docs/bio",
+    icon: Users
   },
 ];
 
@@ -126,31 +138,33 @@ export function Navigation() {
                 )}
               </motion.div>
 
-              {!isCollapsed && isOpen && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="ml-6 mt-1 space-y-1"
-                >
-                  {item.subItems.map((subItem) => (
-                    <Link key={subItem.href} href={subItem.href}>
-                      <motion.div
-                        whileHover={{ x: 4 }}
-                        className={cn(
-                          "px-3 py-1.5 text-sm rounded-md transition-colors",
-                          pathname === subItem.href
-                            ? "text-blue-500 bg-blue-600/5"
-                            : "text-gray-400 hover:text-white hover:bg-blue-600/5"
-                        )}
-                      >
-                        {subItem.name}
-                      </motion.div>
-                    </Link>
-                  ))}
-                </motion.div>
-              )}
+              <AnimatePresence>
+                {!isCollapsed && isOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="ml-6 mt-1 space-y-1 overflow-hidden"
+                  >
+                    {item.subItems?.map((subItem) => (
+                      <Link key={subItem.href} href={subItem.href}>
+                        <motion.div
+                          whileHover={{ x: 4 }}
+                          className={cn(
+                            "px-3 py-1.5 text-sm rounded-md transition-colors",
+                            pathname === subItem.href
+                              ? "text-blue-500 bg-blue-600/5"
+                              : "text-gray-400 hover:text-white hover:bg-blue-600/5"
+                          )}
+                        >
+                          {subItem.name}
+                        </motion.div>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}

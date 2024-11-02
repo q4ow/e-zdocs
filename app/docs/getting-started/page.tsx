@@ -1,20 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { Metadata } from 'next';
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Getting Started | E-Z Documentation',
-    description: 'Getting Started with E-Z Services and an overview of the platform',
-    metadataBase: new URL('https://e-z.software'),
-    openGraph: {
-      title: 'Getting Started with E-Z',
-      description: 'Getting Started with E-Z Services and an overview of the platform',
-      images: ['/assets/og-image.png'],
-    },
-  };
-}
 
 export default function GettingStarted() {
   return (

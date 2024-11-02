@@ -1,7 +1,19 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Code2 } from "lucide-react";
+import Image from "next/image";
+import ezLogo from "@/public/assets/e-z.svg";
+
+const animation = {
+  animate: {
+    y: [0, -20, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+};
 
 export function FloatingIcon() {
   const { scrollY } = useScroll();
@@ -11,9 +23,16 @@ export function FloatingIcon() {
   return (
     <motion.div
       style={{ y, rotate }}
+      animate={animation.animate}
       className="fixed right-8 top-8 opacity-10 pointer-events-none"
     >
-      <Code2 className="w-48 h-48 text-blue-500" />
+      <Image
+        src={ezLogo}
+        alt="E-Z Logo"
+        width={128}
+        height={128}
+        className="text-blue-500"
+      />
     </motion.div>
   );
 }
