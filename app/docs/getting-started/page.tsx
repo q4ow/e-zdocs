@@ -1,4 +1,16 @@
+'use client';
+
 import { motion } from "framer-motion";
+
+export const metadata = {
+  title: 'Getting Started | E-Z Documentation',
+  description: 'Getting Started with E-Z Services and an overview of the platform',
+  openGraph: {
+    title: 'Getting Started with E-Z',
+    description: 'Getting Started with E-Z Services and an overview of the platform',
+    images: ['/assets/og-image.png'],
+  },
+}
 
 export default function GettingStarted() {
   return (
@@ -8,9 +20,11 @@ export default function GettingStarted() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <h1 className="text-4xl font-bold mb-4">Getting Started with E-Z.GG</h1>
+        <h1 className="text-4xl font-bold mb-4">Getting Started with E-Z Services</h1>
         <p className="text-gray-400 text-lg">
-          Learn how to integrate E-Z.GG into your applications and get started with our powerful gaming APIs.
+        E-Z Services is a platform that provides a range of web services to its users.
+        We offer an image hosting service, for you to host your images on our platform.
+        We also offer a bio page service, for you to host your bio page on our platform.
         </p>
       </motion.div>
 
@@ -22,13 +36,13 @@ export default function GettingStarted() {
       >
         <h2 className="text-2xl font-semibold mb-4">Quick Navigation</h2>
         <div className="grid gap-4 md:grid-cols-2">
-          <a href="/docs/getting-started/quick-start" className="block p-4 rounded-lg bg-blue-600/5 hover:bg-blue-600/10 transition-colors">
-            <h3 className="font-semibold mb-2">Quick Start Guide</h3>
-            <p className="text-sm text-gray-400">Get up and running in minutes with our quick start guide.</p>
+          <a href="/docs/getting-started/registration" className="block p-4 rounded-lg bg-blue-600/5 hover:bg-blue-600/10 transition-colors">
+            <h3 className="font-semibold mb-2">Registration</h3>
+            <p className="text-sm text-gray-400">All you need to know when registering your account</p>
           </a>
-          <a href="/docs/getting-started/installation" className="block p-4 rounded-lg bg-blue-600/5 hover:bg-blue-600/10 transition-colors">
-            <h3 className="font-semibold mb-2">Installation</h3>
-            <p className="text-sm text-gray-400">Detailed installation instructions for different platforms.</p>
+          <a href="/docs/getting-started/dashboard" className="block p-4 rounded-lg bg-blue-600/5 hover:bg-blue-600/10 transition-colors">
+            <h3 className="font-semibold mb-2">Dashboard</h3>
+            <p className="text-sm text-gray-400">Detailed overview of the E-Z user dashboard and its functionality</p>
           </a>
         </div>
       </motion.div>

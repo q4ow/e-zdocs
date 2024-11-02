@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import { Code2, BookOpen, Settings, ExternalLink, ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ezLogo from "../public/assets/e-z.svg";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
@@ -45,7 +47,7 @@ export function Navigation() {
   return (
     <nav
       className={cn(
-        "relative bg-black border-r border-blue-900/20 p-4 space-y-8 transition-all duration-300",
+        "relative bg-zinc-950 border-r border-blue-900/20 p-4 space-y-8 transition-all duration-300",
         isCollapsed ? "w-20" : "w-64"
       )}
     >
@@ -68,9 +70,11 @@ export function Navigation() {
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         >
-          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
-            <Code2 className="w-5 h-5 text-white" />
-          </div>
+            {!isCollapsed && (
+            <Link href="/" className="w-12 h-12 rounded-lg flex items-center justify-center">
+              <Image src={ezLogo} alt="" />
+            </Link>
+            )}
         </motion.div>
         <motion.div
           initial={{ x: -20, opacity: 0 }}
@@ -94,7 +98,6 @@ export function Navigation() {
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                onClick={() => !isCollapsed && setOpenSection(isOpen ? null : item.name)}
                 className={cn(
                   "flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all cursor-pointer",
                   isActive
@@ -102,14 +105,24 @@ export function Navigation() {
                     : "text-gray-400 hover:text-white hover:bg-blue-600/5"
                 )}
               >
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Icon className="w-4 h-4" />
-                </motion.div>
+                <Link href={item.href}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Icon className="w-4 h-4" />
+                  </motion.div>
+                </Link>
                 {!isCollapsed && (
-                  <span className="flex-1">{item.name}</span>
+                  <span 
+                    className="flex-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setOpenSection(isOpen ? null : item.name);
+                    }}
+                  >
+                    {item.name}
+                  </span>
                 )}
               </motion.div>
 
@@ -155,7 +168,7 @@ export function Navigation() {
           )}
         >
           <ExternalLink className="w-4 h-4" />
-          {!isCollapsed && "Visit E-Z.GG"}
+          {!isCollapsed && "Visit E-Z.gg"}
         </motion.a>
       </div>
     </nav>

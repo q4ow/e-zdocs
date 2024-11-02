@@ -8,8 +8,8 @@ import { FloatingIcon } from '@/components/floating-icon';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'E-Z.GG Documentation',
-  description: 'Official documentation for E-Z.GG platform',
+  title: 'E-Z Services Documentation',
+  description: 'Unofficial documentation for E-Z Services',
 };
 
 export default function RootLayout({

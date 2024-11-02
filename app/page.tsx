@@ -1,8 +1,18 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Zap, Shield } from "lucide-react";
+import { ArrowRight, Globe, Zap, Shield } from "lucide-react";
 import Link from "next/link";
+
+export const metadata = {
+  title: 'Home | E-Z Documentation',
+  description: 'API documentation and guides for E-Z Services',
+  openGraph: {
+    title: 'E-Z Documentation',
+    description: 'API documentation and guides for E-Z Services',
+    images: ['/assets/og-image.png'],
+  },
+}
 
 export default function Home() {
   const features = [
@@ -13,11 +23,11 @@ export default function Home() {
     },
     {
       icon: Shield,
-      title: "Secure by Default",
+      title: "Privacy focused",
       description: "We pride ourself on our privacy! Read our privacy policy for more info.",
     },
     {
-      icon: Code2,
+      icon: Globe,
       title: "E-Z = Easy",
       description: "As is our brand, our services are famously simple and intuitive for our users.",
     },
@@ -35,12 +45,11 @@ export default function Home() {
             <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
               Welcome to{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">
-                E-Z.GG
+                E-Z Docs
               </span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              The ultimate platform for gamers and developers. Build amazing gaming
-              experiences with our powerful APIs and tools.
+            High-quality and easy to use web services. We strive to offer the best experience possible for our users.
             </p>
           </motion.div>
 
