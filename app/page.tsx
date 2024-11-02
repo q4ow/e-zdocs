@@ -41,14 +41,14 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "17,684", label: "Active Users" },
-    { value: "1,854,204", label: "Unique Views" },
-    { value: "4,458,911", label: "Uploads" },
+    { value: "17684", label: "Active Users" },
+    { value: "1854204", label: "Unique Views" },
+    { value: "4458911", label: "Uploads" },
     { value: "24/7", label: "Support" },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-blue-950/80 to-black">
+    <div className="min-h-screen bg-gradient-to-b from-black via-blue-950/20 to-black">
       <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="space-y-16 sm:space-y-24">
           <div className="text-center space-y-8">
@@ -114,6 +114,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* CTA Section */}
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
