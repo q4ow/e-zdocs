@@ -1,17 +1,21 @@
 import UnderConstruction from "@/components/under-construction";
+import { Metadata } from 'next';
 
-export const metadata = {
-    title: 'API Reference | E-Z Documentation', 
-    description: 'Complete API reference documentation for E-Z platform',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Endpoints | E-Z Documentation',
+    description: 'Documentation describing the E-Z API endpoints',
+    metadataBase: new URL('https://e-z.software'),
     openGraph: {
-      title: 'E-Z API Reference',
-      description: 'Complete API reference documentation for E-Z platform',
-      images: ['/assets/og-image.png'],
+      title: 'Endpoints | E-Z Documentation',
+      description: 'Documentation describing the E-Z API endpoints',
+      images: ['/assets/e-z.svg'],
     },
-  }
+  };
+}
 
 export default function Api() {
     return (
-        <UnderConstruction />
+      <UnderConstruction />
     );
 }

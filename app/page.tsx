@@ -1,17 +1,20 @@
 'use client';
 
 import { motion } from "framer-motion";
+import { Metadata } from 'next';
 import { ArrowRight, Globe, Zap, Shield } from "lucide-react";
 import Link from "next/link";
 
-export const metadata = {
-  title: 'Home | E-Z Documentation',
-  description: 'API documentation and guides for E-Z Services',
-  openGraph: {
-    title: 'E-Z Documentation',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Home | E-Z Documentation',
     description: 'API documentation and guides for E-Z Services',
-    images: ['/assets/og-image.png'],
-  },
+    openGraph: {
+      title: 'E-Z Documentation',
+      description: 'API documentation and guides for E-Z Services',
+      images: ['/assets/og-image.png'],
+    },
+  };
 }
 
 export default function Home() {
