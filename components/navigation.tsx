@@ -15,8 +15,8 @@ const menuItems = [
     href: "/docs/getting-started",
     icon: BookOpen,
     subItems: [
-      { name: "Quick Start", href: "/docs/getting-started/quick-start" },
-      { name: "Installation", href: "/docs/getting-started/installation" },
+      { name: "Dashboard", href: "/docs/getting-started/dashboard" },
+      { name: "Registration", href: "/docs/getting-started/registration" },
     ],
   },
   {
