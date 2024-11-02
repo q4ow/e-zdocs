@@ -53,7 +53,7 @@ const menuItems = [
 
 export function Navigation() {
   const pathname = usePathname();
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [openSection, setOpenSection] = useState<string | null>(null);
 
   return (
