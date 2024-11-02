@@ -48,7 +48,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-blue-950/20 to-black">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="space-y-16 sm:space-y-24">
           <div className="text-center space-y-8">

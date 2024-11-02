@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function GettingStarted() {
   return (
-    <div className="space-y-8 bg-gradient-to-b from-black via-blue-950/20 to-black">
+    <div className="space-y-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

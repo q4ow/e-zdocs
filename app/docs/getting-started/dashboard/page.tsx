@@ -114,7 +114,7 @@ export default function DashboardGuide() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-blue-950/20 to-black text-white p-8">
+    <div className="min-h-screen text-white p-8">
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.header
           initial={{ opacity: 0, y: 20 }}

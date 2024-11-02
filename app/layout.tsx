@@ -38,7 +38,7 @@ export default function RootLayout({
         >
           <div className="flex h-screen">
             <Navigation />
-            <main className="flex-1 overflow-y-auto relative">
+            <main className="flex-1 overflow-y-auto relative bg-gradient-to-b from-black via-blue-950/20 to-black">
               <FloatingIcon />
               {children}
             </main>
