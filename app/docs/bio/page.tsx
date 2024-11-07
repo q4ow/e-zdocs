@@ -40,6 +40,8 @@ export default function BioDocs() {
       username: "Aiden",
       image: "https://arch-linux.xyz/oxzn20ru.png",
       bioLink: "https://e-z.bio/aiden",
+      socialCount: "22918",
+      primaryPlatform: <Eye className="w-4 h-4" />
     },
     {
       username: "Always",
