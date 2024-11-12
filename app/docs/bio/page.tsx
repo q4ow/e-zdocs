@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -44,10 +45,52 @@ export default function BioDocs() {
       primaryPlatform: <Eye className="w-4 h-4" />
     },
     {
+      username: "Nado",
+      image: "https://arch-linux.xyz/c9qhakma.png",
+      bioLink: "https://e-z.bio/vx",
+      socialCount: "2050",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
       username: "Always",
       image: "https://arch-linux.xyz/t1zkap63.png",
       bioLink: "https://e-z.bio/az",
       socialCount: "2034",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
+      username: "Eva",
+      image: "https://arch-linux.xyz/jd4fkwjs.png",
+      bioLink: "https://e-z.bio/eva",
+      socialCount: "1754",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
+      username: "Kyuiki",
+      image: "https://arch-linux.xyz/jld517td.png",
+      bioLink: "https://e-z.bio/ky",
+      socialCount: "1218",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
+      username: "Loud",
+      image: "https://arch-linux.xyz/imk3oqi3.png",
+      bioLink: "https://e-z.bio/loud",
+      socialCount: "1066",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
+      username: "not_noob",
+      image: "https://arch-linux.xyz/es9ddfjw.png",
+      bioLink: "https://e-z.bio/ffs",
+      socialCount: "750",
+      primaryPlatform: <Eye className="w-4 h-4" />
+    },
+    {
+      username: "Karan",
+      image: "https://arch-linux.xyz/95mufzns.png",
+      bioLink: "https://e-z.bio/dma",
+      socialCount: "603",
       primaryPlatform: <Eye className="w-4 h-4" />
     },
     {
@@ -65,31 +108,17 @@ export default function BioDocs() {
       primaryPlatform: <Eye className="w-4 h-4" />
     },
     {
-      username: "Eva",
-      image: "https://arch-linux.xyz/jd4fkwjs.png",
-      bioLink: "https://e-z.bio/eva",
-      socialCount: "1754",
+      username: "Linqfy",
+      image: "https://arch-linux.xyz/6xz6kcto.png",
+      bioLink: "https://e-z.bio/qq",
+      socialCount: "167",
       primaryPlatform: <Eye className="w-4 h-4" />
     },
     {
-      username: "Karan",
-      image: "https://arch-linux.xyz/95mufzns.png",
-      bioLink: "https://e-z.bio/dma",
-      socialCount: "603",
-      primaryPlatform: <Eye className="w-4 h-4" />
-    },
-    {
-      username: "Loud",
-      image: "https://arch-linux.xyz/imk3oqi3.png",
-      bioLink: "https://e-z.bio/loud",
-      socialCount: "1066",
-      primaryPlatform: <Eye className="w-4 h-4" />
-    },
-    {
-      username: "Nado",
-      image: "https://arch-linux.xyz/c9qhakma.png",
-      bioLink: "https://e-z.bio/vx",
-      socialCount: "2050",
+      username: "entity",
+      image: "https://arch-linux.xyz/zt88b00o.png",
+      bioLink: "https://e-z.bio/entity",
+      socialCount: "14",
       primaryPlatform: <Eye className="w-4 h-4" />
     }
   ];
@@ -213,7 +242,7 @@ export default function BioDocs() {
               Featured Bios
             </h2>
             <p className="text-gray-400">
-              Get inspired by some of our amazing users' bio pages
+              Get inspired by some of our amazing users&apos; bio pages
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -312,9 +341,9 @@ export default function BioDocs() {
               <span className="text-gray-400">Example API request</span>
             </div>
             <code className="text-purple-400">
-            curl -X POST 'https://api.e-z.host/files' \<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;-H 'key: YOUR_API_KEY' \<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;-F 'file=@/path/to/file'
+            curl -X POST &apos;https://api.e-z.host/files&apos; \<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;-H &apos;key: YOUR_API_KEY&apos; \<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;-F &apos;file=@/path/to/file&apos;
             </code>
           </div>
           <div className="mt-4 flex items-center gap-2">

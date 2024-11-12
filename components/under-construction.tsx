@@ -9,7 +9,7 @@ const UnderConstruction = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-2xl mx-auto bg-zinc-950 text-center p-8 rounded-lg shadow-xl"
+        className="max-w-2xl mx-auto text-center p-8 rounded-lg shadow-xl"
       >
         <motion.div
           animate={{ rotate: [0, -10, 10, -10, 0] }}
@@ -34,7 +34,7 @@ const UnderConstruction = () => {
           transition={{ delay: 0.5 }}
           className="text-lg text-white/50 mb-8"
         >
-          We're working hard to bring you something amazing. Please check back soon!
+          We&apos;re working hard to bring you something amazing. Please check back soon!
         </motion.p>
         
         <motion.div
