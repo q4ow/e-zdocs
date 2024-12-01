@@ -1,53 +1,52 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { 
-  LayoutDashboard, 
+import { motion } from "framer-motion";
+import {
+  LayoutDashboard,
   Link,
-  Settings, 
+  Settings,
   Images,
   Terminal,
   Users,
   ScrollText,
   FileUp,
   Link2,
-  Code
-} from 'lucide-react';
+  Code,
+} from "lucide-react";
 
 export default function DashboardGuide() {
   const sections = [
     {
       icon: <LayoutDashboard className="w-6 h-6 text-indigo-400" />,
       title: "Overview",
-      description: "The main dashboard view provides a short summary of your stats. Here you'll find:",
+      description:
+        "The main dashboard view provides a short summary of your stats. Here you'll find:",
       features: [
         "Total Uploads",
         "Storage Used",
         "Invited Users",
-        "Daily Uploads"
-      ]
+        "Daily Uploads",
+      ],
     },
     {
       icon: <Settings className="w-6 h-6 text-indigo-400" />,
       title: "Settings",
-      description: "Configure your settings to personalise E-Z to your needs. Features include:",
+      description:
+        "Configure your settings to personalise E-Z to your needs. Features include:",
       features: [
         "Dedicated upload tools",
         "URL settings",
         "Embed editor",
         "Image border settings",
-        "Time settings"
-      ]
+        "Time settings",
+      ],
     },
     {
       icon: <Link className="w-6 h-6 text-indigo-400" />,
       title: "Domains",
-      description: "View all public domains along with managing your own donated domains.",
-      features: [
-        "Domain list",
-        "Add your own",
-        "User count for each domain"
-      ]
+      description:
+        "View all public domains along with managing your own donated domains.",
+      features: ["Domain list", "Add your own", "User count for each domain"],
     },
     {
       icon: <Images className="w-6 h-6 text-indigo-400" />,
@@ -57,8 +56,8 @@ export default function DashboardGuide() {
         "Manage your files",
         "Copy the file URL",
         "Delete your files at any time",
-        "Filter by file type"
-      ]
+        "Filter by file type",
+      ],
     },
     {
       icon: <FileUp className="w-6 h-6 text-indigo-400" />,
@@ -68,8 +67,8 @@ export default function DashboardGuide() {
         "25MB file limit per upload",
         "100MB file limit for premium users",
         "Images, videos and audio supported",
-        "ShareX compatible"
-      ]
+        "ShareX compatible",
+      ],
     },
     {
       icon: <Link2 className="w-6 h-6 text-indigo-400" />,
@@ -78,39 +77,40 @@ export default function DashboardGuide() {
       features: [
         "Choose from 180+ domains",
         "ShareX compatible",
-        "Copy/Delete your shortened URLs"
-      ]
+        "Copy/Delete your shortened URLs",
+      ],
     },
     {
       icon: <Code className="w-6 h-6 text-indigo-400" />,
       title: "Pastes",
-      description: "Create pastes using any programming/markdown language or plain text.",
+      description:
+        "Create pastes using any programming/markdown language or plain text.",
       features: [
         "Syntax highlighting",
         "Custom URLs",
         "ShareX compatible",
-        "Text file uploads"
-      ]
+        "Text file uploads",
+      ],
     },
   ];
 
   const quickTips = [
     {
       icon: <ScrollText className="w-5 h-5 text-indigo-400" />,
-      tip: "You can use supported parameters to customise your embeds dynamically"
+      tip: "You can use supported parameters to customise your embeds dynamically",
     },
     {
       icon: <Terminal className="w-5 h-5 text-indigo-400" />,
-      tip: "You can use most of our services via documented, RESTful API endpoints"
+      tip: "You can use most of our services via documented, RESTful API endpoints",
     },
     {
       icon: <Users className="w-5 h-5 text-indigo-400" />,
-      tip: "Communicate with other users and staff in our Discord server for help and to chat"
+      tip: "Communicate with other users and staff in our Discord server for help and to chat",
     },
     {
       icon: <Settings className="w-5 h-5 text-indigo-400" />,
-      tip: "Our services are highly configurable while being usable out of the box"
-    }
+      tip: "Our services are highly configurable while being usable out of the box",
+    },
   ];
 
   return (
@@ -125,7 +125,8 @@ export default function DashboardGuide() {
             Dashboard Documentation
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Your complete guide to navigating and utilizing the E-Z dashboard effectively
+            Your complete guide to navigating and utilizing the E-Z dashboard
+            effectively
           </p>
         </motion.header>
 
@@ -170,7 +171,9 @@ export default function DashboardGuide() {
           transition={{ delay: 0.4 }}
           className="bg-indigo-500/5 border border-indigo-500/20 rounded-xl p-8"
         >
-          <h3 className="text-2xl font-semibold mb-6">Quick Tips & Shortcuts</h3>
+          <h3 className="text-2xl font-semibold mb-6">
+            Quick Tips & Shortcuts
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {quickTips.map((tip, index) => (
               <div key={index} className="flex items-center gap-3">
@@ -191,8 +194,9 @@ export default function DashboardGuide() {
         >
           <h3 className="text-2xl font-semibold mb-4">Need More Help?</h3>
           <p className="text-gray-400">
-            If you are registered with our service, you will already be in our Discord server.
-            This is your go-to place for help, support and general chat with other users and staff.
+            If you are registered with our service, you will already be in our
+            Discord server. This is your go-to place for help, support and
+            general chat with other users and staff.
           </p>
         </motion.div>
       </div>

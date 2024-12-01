@@ -1,30 +1,36 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { CheckCircle, Clipboard, CircleHelp, CircleDollarSign } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  Clipboard,
+  CircleHelp,
+  CircleDollarSign,
+} from "lucide-react";
 
 export default function RegistrationGuide() {
   const steps = [
     {
       icon: <CircleDollarSign className="w-6 h-6 text-blue-400" />,
       title: "Invite code",
-      description: "Start by purchasing an invite code from our store."
+      description: "Start by purchasing an invite code from our store.",
     },
     {
       icon: <CircleHelp className="w-6 h-6 text-blue-400" />,
       title: "Discord",
-      description: "You need a valid discord account to access our services."
+      description: "You need a valid discord account to access our services.",
     },
     {
       icon: <Clipboard className="w-6 h-6 text-blue-400" />,
       title: "TOS",
-      description: "Accepting our terms of service is required to access the site."
+      description:
+        "Accepting our terms of service is required to access the site.",
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-blue-400" />,
       title: "That's it!",
-      description: "Fill in your account details and you're ready to go."
-    }
+      description: "Fill in your account details and you're ready to go.",
+    },
   ];
 
   const container = {
@@ -32,14 +38,14 @@ export default function RegistrationGuide() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, x: -20 },
-    show: { opacity: 1, x: 0 }
+    show: { opacity: 1, x: 0 },
   };
 
   return (
@@ -59,7 +65,8 @@ export default function RegistrationGuide() {
               Registration Guide
             </h1>
             <p className="text-gray-400 text-lg">
-              Follow our simple registration process to create your account and get started with our services.
+              Follow our simple registration process to create your account and
+              get started with our services.
             </p>
           </motion.div>
 
@@ -98,20 +105,28 @@ export default function RegistrationGuide() {
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span>Make sure to use a valid email address.
-                  It will be necessary if you wish to reset your password</span>
+                <span>
+                  Make sure to use a valid email address. It will be necessary
+                  if you wish to reset your password
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span>Two-factor authentication and using a strong password is highly recommended</span>
+                <span>
+                  Two-factor authentication and using a strong password is
+                  highly recommended
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                <span>If you need any support, open a ticket in the Discord server</span>
+                <span>
+                  If you need any support, open a ticket in the Discord server
+                </span>
               </li>
             </ul>
           </motion.div>
         </div>
       </motion.div>
     </div>
-    )};
+  );
+}

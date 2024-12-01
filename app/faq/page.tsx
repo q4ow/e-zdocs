@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import { Search, MessageCircle } from "lucide-react";
@@ -10,14 +10,16 @@ export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const categories = Array.from(new Set(faqs.map(faq => faq.category)));
+  const categories = Array.from(new Set(faqs.map((faq) => faq.category)));
 
-  const filteredFaqs = faqs.filter(faq => {
-    const matchesSearch = searchQuery.trim() === "" || 
+  const filteredFaqs = faqs.filter((faq) => {
+    const matchesSearch =
+      searchQuery.trim() === "" ||
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.shortAnswer.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesCategory = !selectedCategory || faq.category === selectedCategory;
+
+    const matchesCategory =
+      !selectedCategory || faq.category === selectedCategory;
 
     return matchesSearch && matchesCategory;
   });
@@ -36,10 +38,11 @@ export default function FAQPage() {
           </h1>
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Find answers to common questions about E-Z services.
-            <br />Can't find what you're looking for?
+            <br />
+            Can't find what you're looking for?
           </p>
           <button
-            onClick={() => window.open('/discord', '_blank')}
+            onClick={() => window.open("/discord", "_blank")}
             className="inline-flex items-center text-white hover:text-blue-300 mt-2"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
@@ -94,7 +97,9 @@ export default function FAQPage() {
 
           {filteredFaqs.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-zinc-400">No questions found matching your criteria.</p>
+              <p className="text-zinc-400">
+                No questions found matching your criteria.
+              </p>
             </div>
           )}
         </div>

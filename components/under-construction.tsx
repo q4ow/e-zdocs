@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const UnderConstruction = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -18,8 +18,8 @@ const UnderConstruction = () => {
         >
           <span className="text-6xl">🚧</span>
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -27,16 +27,17 @@ const UnderConstruction = () => {
         >
           Under Construction
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="text-lg text-white/50 mb-8"
         >
-          We&apos;re working hard to bring you something amazing. Please check back soon!
+          We&apos;re working hard to bring you something amazing. Please check
+          back soon!
         </motion.p>
-        
+
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}

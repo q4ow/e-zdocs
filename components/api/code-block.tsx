@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Check, Clipboard } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { Check, Clipboard } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface CodeBlockProps {
   language: string;

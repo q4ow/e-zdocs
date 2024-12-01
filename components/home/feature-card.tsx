@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import { motion } from "framer-motion";
+import { LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -10,7 +10,12 @@ interface FeatureCardProps {
   index: number;
 }
 
-export function FeatureCard({ icon: Icon, title, description, index }: FeatureCardProps) {
+export function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  index,
+}: FeatureCardProps) {
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}
@@ -23,9 +28,7 @@ export function FeatureCard({ icon: Icon, title, description, index }: FeatureCa
           <Icon className="w-6 h-6 text-blue-400" />
         </div>
       </div>
-      <h3 className="mt-4 text-xl font-semibold text-white">
-        {title}
-      </h3>
+      <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
       <p className="mt-2 text-gray-400">{description}</p>
     </motion.div>
   );

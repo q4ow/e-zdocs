@@ -1,17 +1,20 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   className?: string;
 }
 
-export default function LoadingSpinner({ size = 'md', className = '' }: LoadingSpinnerProps) {
+export default function LoadingSpinner({
+  size = "md",
+  className = "",
+}: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12",
   };
 
   return (
@@ -22,7 +25,7 @@ export default function LoadingSpinner({ size = 'md', className = '' }: LoadingS
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: 'linear'
+          ease: "linear",
         }}
       />
     </div>

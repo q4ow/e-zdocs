@@ -1,7 +1,16 @@
-'use client';
+"use client";
 
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Globe, Zap, Shield, Users, Code, Star, Heart } from "lucide-react";
+import {
+  ArrowRight,
+  Globe,
+  Zap,
+  Shield,
+  Users,
+  Code,
+  Star,
+  Heart,
+} from "lucide-react";
 import Link from "next/link";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
@@ -12,32 +21,38 @@ export default function Home() {
     {
       icon: Zap,
       title: "Lightning Fast",
-      description: "Built using the Fastify node framework, we're optimized for efficiency and minimal latency",
+      description:
+        "Built using the Fastify node framework, we're optimized for efficiency and minimal latency",
     },
     {
       icon: Shield,
       title: "Privacy Focused",
-      description: "We pride ourselves on our privacy and security! Read our privacy policy for more info.",
+      description:
+        "We pride ourselves on our privacy and security! Read our privacy policy for more info.",
     },
     {
       icon: Globe,
       title: "E-Z = Easy",
-      description: "As is our brand, our services are famously simple and intuitive for our users.",
+      description:
+        "As is our brand, our services are famously simple and intuitive for our users.",
     },
     {
       icon: Users,
       title: "Growing Community",
-      description: "Join thousands of users who trust E-Z Services to provide a great user experience.",
+      description:
+        "Join thousands of users who trust E-Z Services to provide a great user experience.",
     },
     {
       icon: Code,
       title: "Developer Friendly",
-      description: "Comprehensive API documentation and we offer pastes to help you store your code snippets.",
+      description:
+        "Comprehensive API documentation and we offer pastes to help you store your code snippets.",
     },
     {
       icon: Heart,
       title: "Made with Love",
-      description: "The team at e-z has a burning passion for creating the best user experience. We love what we do!",
+      description:
+        "The team at e-z has a burning passion for creating the best user experience. We love what we do!",
     },
   ];
 
@@ -53,7 +68,10 @@ export default function Home() {
   const ctaRef = useRef(null);
 
   const statsInView = useInView(statsRef, { once: true, margin: "-100px" });
-  const featuresInView = useInView(featuresRef, { once: true, margin: "-100px" });
+  const featuresInView = useInView(featuresRef, {
+    once: true,
+    margin: "-100px",
+  });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
 
   return (
@@ -75,7 +93,8 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl leading-8 text-gray-300 max-w-2xl mx-auto">
-                High-quality and easy to use web services. We strive to offer the best experience possible for our users.
+                High-quality and easy to use web services. We strive to offer
+                the best experience possible for our users.
               </p>
             </motion.div>
 
@@ -119,7 +138,9 @@ export default function Home() {
           <div ref={featuresRef}>
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
-              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+              animate={
+                featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
+              }
               transition={{ duration: 0.5 }}
               className="text-2xl sm:text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 glow-text-blue"
             >
@@ -127,7 +148,9 @@ export default function Home() {
             </motion.h2>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
-              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+              animate={
+                featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }
+              }
               transition={{ duration: 0.7, delay: 0.2 }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
             >
@@ -146,9 +169,12 @@ export default function Home() {
             className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 glow-card"
           >
             <Star className="w-12 h-12 text-blue-400 mx-auto glow-icon-blue" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Ready to get started?</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">
+              Ready to get started?
+            </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg">
-              Join thousands of users who trust us to provide great services.<br />
+              Join thousands of users who trust us to provide great services.
+              <br />
               Get started today!
             </p>
             <Link

@@ -7,11 +7,11 @@ import { FAQCard } from "@/components/faq/faq-card";
 import { notFound } from "next/dist/client/components/not-found";
 import { cn } from "@/lib/utils";
 
-interface Props {
-  params: {
+type PageProps = {
+  params: Promise<{
     id: string;
-  };
-}
+  }>;
+};
 
 export function generateStaticParams() {
   return faqs.map((faq) => ({
@@ -19,8 +19,11 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const faq = getFAQ(params.id);
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const faq = getFAQ(resolvedParams.id);
 
   if (!faq) {
     return {
@@ -38,38 +41,42 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function SectionContent({ content, type }: { content: string; type?: string }) {
   const formattedContent = content.trim();
 
-  if (type === 'bullets' || type === 'steps') {
+  if (type === "bullets" || type === "steps") {
     return (
       <div className="space-y-2">
-        {formattedContent.split('\n').map((item, index) => (
+        {formattedContent.split("\n").map((item, index) => (
           <div key={index} className="flex items-start gap-2">
-            <span className="text-blue-400">{type === 'bullets' ? '•' : `${index + 1}.`}</span>
-            <span className="text-zinc-300">{item.replace(/^[-\d]+\.\s*/, '')}</span>
+            <span className="text-blue-400">
+              {type === "bullets" ? "•" : `${index + 1}.`}
+            </span>
+            <span className="text-zinc-300">
+              {item.replace(/^[-\d]+\.\s*/, "")}
+            </span>
           </div>
         ))}
       </div>
     );
   }
 
-  if (type === 'code') {
+  if (type === "code") {
     return (
       <pre className="bg-zinc-900/50 p-4 rounded-lg overflow-x-auto">
-        <code className="text-zinc-300 text-sm">
-          {formattedContent}
-        </code>
+        <code className="text-zinc-300 text-sm">{formattedContent}</code>
       </pre>
     );
   }
 
-  if (type === 'warning') {
+  if (type === "warning") {
     return (
       <div className="bg-yellow-950/20 border border-yellow-500/20 rounded-lg p-4">
         <div className="flex items-start gap-3">
           <AlertTriangle className="w-5 h-5 text-yellow-500 mt-0.5" />
           <div className="space-y-2">
-            {formattedContent.split('\n').map((item, index) => (
+            {formattedContent.split("\n").map((item, index) => (
               <div key={index} className="flex items-start gap-2">
-                <span className="text-zinc-300">{item.replace(/^-\s*/, '')}</span>
+                <span className="text-zinc-300">
+                  {item.replace(/^-\s*/, "")}
+                </span>
               </div>
             ))}
           </div>
@@ -78,7 +85,7 @@ function SectionContent({ content, type }: { content: string; type?: string }) {
     );
   }
 
-  if (type === 'note') {
+  if (type === "note") {
     return (
       <div className="bg-blue-950/20 border border-blue-500/20 rounded-lg p-4">
         <div className="text-zinc-300">{formattedContent}</div>
@@ -86,17 +93,20 @@ function SectionContent({ content, type }: { content: string; type?: string }) {
     );
   }
 
-  return <div className="text-zinc-300 whitespace-pre-wrap">{formattedContent}</div>;
+  return (
+    <div className="text-zinc-300 whitespace-pre-wrap">{formattedContent}</div>
+  );
 }
 
-export default async function FAQDetailPage({ params }: Props) {
-  const faq = getFAQ(params.id);
-  
+export default async function FAQDetailPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const faq = getFAQ(resolvedParams.id);
+
   if (!faq) {
     notFound();
   }
 
-  const relatedFaqs = getRelatedFAQs(params.id);
+  const relatedFaqs = getRelatedFAQs(resolvedParams.id);
 
   return (
     <div className="min-h-screen py-12">
@@ -120,17 +130,23 @@ export default async function FAQDetailPage({ params }: Props) {
                 </div>
               )}
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-white">{faq.question}</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-white">
+              {faq.question}
+            </h1>
             <p className="text-lg text-zinc-300">{faq.shortAnswer}</p>
           </div>
 
           <div className="space-y-8">
             {faq.sections.map((section, index) => (
               <div key={index} className="space-y-4">
-                <h2 className={cn(
-                  "text-xl font-semibold",
-                  section.type === 'warning' ? 'text-yellow-500' : 'text-white'
-                )}>
+                <h2
+                  className={cn(
+                    "text-xl font-semibold",
+                    section.type === "warning"
+                      ? "text-yellow-500"
+                      : "text-white",
+                  )}
+                >
                   {section.title}
                 </h2>
                 <SectionContent content={section.content} type={section.type} />
@@ -163,7 +179,9 @@ export default async function FAQDetailPage({ params }: Props) {
 
           {faq.additionalNotes && faq.additionalNotes.length > 0 && (
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-white">Additional Notes</h2>
+              <h2 className="text-xl font-semibold text-white">
+                Additional Notes
+              </h2>
               <div className="space-y-2">
                 {faq.additionalNotes.map((note, index) => (
                   <div
@@ -180,7 +198,9 @@ export default async function FAQDetailPage({ params }: Props) {
 
           {relatedFaqs.length > 0 && (
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-white">Related Questions</h2>
+              <h2 className="text-xl font-semibold text-white">
+                Related Questions
+              </h2>
               <div className="grid grid-cols-1 gap-4">
                 {relatedFaqs.map((relatedFaq, index) => (
                   <FAQCard

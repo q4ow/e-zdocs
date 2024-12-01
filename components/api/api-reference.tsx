@@ -1,42 +1,85 @@
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FileCode, FileImage, FileAudio, FileVideo } from 'lucide-react'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FileCode, FileImage, FileAudio, FileVideo } from "lucide-react";
 
 export default function ApiReference() {
-  const [activeTab, setActiveTab] = useState("overview")
+  const [activeTab, setActiveTab] = useState("overview");
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-6">Upload API Documentation</h1>
-      
+
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Table of Contents</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2">
-            <li><Button variant="link" onClick={() => scrollToSection('overview')}>Overview</Button></li>
-            <li><Button variant="link" onClick={() => scrollToSection('endpoint')}>Endpoint Details</Button></li>
-            <li><Button variant="link" onClick={() => scrollToSection('file-types')}>Valid File Types</Button></li>
-            <li><Button variant="link" onClick={() => scrollToSection('request')}>Request Details</Button></li>
-            <li><Button variant="link" onClick={() => scrollToSection('response')}>Response</Button></li>
-            <li><Button variant="link" onClick={() => scrollToSection('status-codes')}>Status Codes</Button></li>
+            <li>
+              <Button
+                variant="link"
+                onClick={() => scrollToSection("overview")}
+              >
+                Overview
+              </Button>
+            </li>
+            <li>
+              <Button
+                variant="link"
+                onClick={() => scrollToSection("endpoint")}
+              >
+                Endpoint Details
+              </Button>
+            </li>
+            <li>
+              <Button
+                variant="link"
+                onClick={() => scrollToSection("file-types")}
+              >
+                Valid File Types
+              </Button>
+            </li>
+            <li>
+              <Button variant="link" onClick={() => scrollToSection("request")}>
+                Request Details
+              </Button>
+            </li>
+            <li>
+              <Button
+                variant="link"
+                onClick={() => scrollToSection("response")}
+              >
+                Response
+              </Button>
+            </li>
+            <li>
+              <Button
+                variant="link"
+                onClick={() => scrollToSection("status-codes")}
+              >
+                Status Codes
+              </Button>
+            </li>
           </ul>
         </CardContent>
       </Card>
 
       <section id="overview" className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Overview</h2>
-        <p>The Upload API allows you to upload files to E-Z. Uploaded files can be accessed via the URL provided in the API response or through your Gallery within the dashboard.</p>
+        <p>
+          The Upload API allows you to upload files to E-Z. Uploaded files can
+          be accessed via the URL provided in the API response or through your
+          Gallery within the dashboard.
+        </p>
       </section>
 
       <section id="endpoint" className="mb-8">
@@ -44,7 +87,9 @@ export default function ApiReference() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-lg font-semibold mb-2">
-              <span className="bg-green-500 text-white px-2 py-1 rounded mr-2">POST</span>
+              <span className="bg-green-500 text-white px-2 py-1 rounded mr-2">
+                POST
+              </span>
               <code>/files</code>
             </p>
             <p>Upload a file to E-Z</p>
@@ -80,7 +125,11 @@ export default function ApiReference() {
             </CardContent>
           </Card>
         </div>
-        <p className="mt-4">All files must be &lt;100mb in size. For text or source code, we recommend using a paste, which supports syntax highlighting for major programming and markup languages.</p>
+        <p className="mt-4">
+          All files must be &lt;100mb in size. For text or source code, we
+          recommend using a paste, which supports syntax highlighting for major
+          programming and markup languages.
+        </p>
       </section>
 
       <section id="request" className="mb-8">
@@ -104,11 +153,15 @@ export default function ApiReference() {
                   <tbody>
                     <tr>
                       <td>Content-Type</td>
-                      <td><code>multipart/form-data</code></td>
+                      <td>
+                        <code>multipart/form-data</code>
+                      </td>
                     </tr>
                     <tr>
                       <td>key</td>
-                      <td><code>Your key here</code></td>
+                      <td>
+                        <code>Your key here</code>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -128,8 +181,12 @@ export default function ApiReference() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code>file</code></td>
-                      <td><code>file</code> (multipart)</td>
+                      <td>
+                        <code>file</code>
+                      </td>
+                      <td>
+                        <code>file</code> (multipart)
+                      </td>
                       <td>The file to upload</td>
                     </tr>
                   </tbody>
@@ -174,8 +231,16 @@ export default function ApiReference() {
 
       <section id="status-codes" className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Status Codes</h2>
-        <p>A valid request will result in a response status code of <strong>200</strong>. For other status codes and their meanings, please refer to the <a href="/upload/responses" className="text-blue-500 hover:underline">Responses</a> page.</p>
+        <p>
+          A valid request will result in a response status code of{" "}
+          <strong>200</strong>. For other status codes and their meanings,
+          please refer to the{" "}
+          <a href="/upload/responses" className="text-blue-500 hover:underline">
+            Responses
+          </a>{" "}
+          page.
+        </p>
       </section>
     </div>
-  )
+  );
 }

@@ -1,20 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { CodeBlock } from '@/components/api/code-block';
-import {
-  Key,
-  Lock,
-  AlertCircle,
-  Terminal
-} from 'lucide-react';
+import { motion } from "framer-motion";
+import { CodeBlock } from "@/components/api/code-block";
+import { Key, Lock, AlertCircle, Terminal } from "lucide-react";
 
 export default function ApiDocs() {
   const endpoints = [
     {
-      method: 'POST',
-      path: '/files/',
-      description: 'Upload files to the E-Z.host API',
+      method: "POST",
+      path: "/files/",
+      description: "Upload files to the E-Z.host API",
       authentication: true,
       examples: {
         curl: `curl -X POST 'https://api.e-z.host/files' \\
@@ -26,13 +21,13 @@ export default function ApiDocs() {
   "imageUrl": "https://i.e-z.host/file.jpg",
   "rawUrl": "https://r2.e-z.host/uuid/file.jpg",
   "deletionUrl": "https://api.e-z.host/files/delete?key=random-deletion-key"
-}`
-      }
+}`,
+      },
     },
     {
-      method: 'POST',
-      path: '/shortener/',
-      description: 'Shorten links with the E-Z.host API',
+      method: "POST",
+      path: "/shortener/",
+      description: "Shorten links with the E-Z.host API",
       authentication: true,
       examples: {
         curl: `curl -X POST https://api.e-z.host/shortener \\
@@ -44,13 +39,13 @@ export default function ApiDocs() {
   "message": "URL Shortened",
   "shortendUrl": "https://i.e-z.gg/s/xyz123",
   "deletionUrl": "https://i.e-z.gg/shortener/delete?key=random-deletion-key"
-}`
-      }
+}`,
+      },
     },
     {
-      method: 'POST',
-      path: '/paste/',
-      description: 'Create pastes with the E-Z.host API',
+      method: "POST",
+      path: "/paste/",
+      description: "Create pastes with the E-Z.host API",
       authentication: true,
       examples: {
         curl: `curl -X POST https://api.e-z.host/paste \\
@@ -68,8 +63,8 @@ export default function ApiDocs() {
   "pasteUrl": "https://i.e-z.gg/p/xyz123",
   "rawUrl": "https://i.e-z.gg/p/raw/xyz123",
   "deletionUrl": "https://api.e-z.host/paste/delete?key=random-deletion-key"
-}`
-      }
+}`,
+      },
     },
   ];
 
@@ -120,7 +115,7 @@ export default function ApiDocs() {
             <Terminal className="w-6 h-6 text-purple-400" />
             Endpoints
           </h2>
-          
+
           {endpoints.map((endpoint, index) => (
             <div
               key={index}
@@ -129,12 +124,17 @@ export default function ApiDocs() {
               <div className="flex items-start justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className={`px-2 py-1 rounded text-xs font-mono ${
-                      endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
-                      endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
-                      endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
-                    }`}>
+                    <span
+                      className={`px-2 py-1 rounded text-xs font-mono ${
+                        endpoint.method === "GET"
+                          ? "bg-green-500/20 text-green-400"
+                          : endpoint.method === "POST"
+                            ? "bg-blue-500/20 text-blue-400"
+                            : endpoint.method === "PUT"
+                              ? "bg-yellow-500/20 text-yellow-400"
+                              : "bg-red-500/20 text-red-400"
+                      }`}
+                    >
                       {endpoint.method}
                     </span>
                     <code className="text-purple-400">{endpoint.path}</code>
@@ -153,15 +153,14 @@ export default function ApiDocs() {
 
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold">Examples</h4>
-                
+
                 <div className="space-y-4">
-                  <CodeBlock
-                    language="curl"
-                    code={endpoint.examples.curl}
-                  />
-                  
+                  <CodeBlock language="curl" code={endpoint.examples.curl} />
+
                   <div>
-                    <h5 className="text-sm font-semibold text-gray-400 mb-2">Response</h5>
+                    <h5 className="text-sm font-semibold text-gray-400 mb-2">
+                      Response
+                    </h5>
                     <CodeBlock
                       language="json"
                       code={endpoint.examples.response}
@@ -188,13 +187,32 @@ export default function ApiDocs() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="text-gray-300">
-                  • Ask our <a href="https://discord.gg/ez" className="text-purple-400 hover:text-purple-300">Discord</a> community and staff
+                  • Ask our{" "}
+                  <a
+                    href="https://discord.gg/ez"
+                    className="text-purple-400 hover:text-purple-300"
+                  >
+                    Discord
+                  </a>{" "}
+                  community and staff
                 </li>
                 <li className="text-gray-300">
-                  • Email us at <a href="mailto:support@e-z.gg" className="text-purple-400 hover:text-purple-300">support@e-z.gg</a>
+                  • Email us at{" "}
+                  <a
+                    href="mailto:support@e-z.gg"
+                    className="text-purple-400 hover:text-purple-300"
+                  >
+                    support@e-z.gg
+                  </a>
                 </li>
                 <li className="text-gray-300">
-                  • Check our <a href="/docs/faq" className="text-purple-400 hover:text-purple-300">FAQ</a>
+                  • Check our{" "}
+                  <a
+                    href="/docs/faq"
+                    className="text-purple-400 hover:text-purple-300"
+                  >
+                    FAQ
+                  </a>
                 </li>
               </ul>
             </div>

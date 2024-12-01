@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Globe,
   Image as ImageIcon,
@@ -19,21 +19,23 @@ import {
   FileText,
   ExternalLink,
   Terminal,
-  Eye
-} from 'lucide-react';
+  Eye,
+} from "lucide-react";
 
 export default function BioDocs() {
   const features = [
     {
       icon: <ImageIcon className="w-6 h-6 text-purple-400" />,
       title: "Customizable",
-      description: "Create a beautiful, customizable profile page to showcase your online presence"
+      description:
+        "Create a beautiful, customizable profile page to showcase your online presence",
     },
     {
       icon: <Globe className="w-6 h-6 text-purple-400" />,
       title: "Shareable bio link",
-      description: "Easily share your bio page link with anyone, anywhere using your very own bio link"
-    }
+      description:
+        "Easily share your bio page link with anyone, anywhere using your very own bio link",
+    },
   ];
 
   const featuredBios = [
@@ -42,122 +44,124 @@ export default function BioDocs() {
       image: "https://arch-linux.xyz/oxzn20ru.png",
       bioLink: "https://e-z.bio/aiden",
       socialCount: "22918",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Nado",
       image: "https://arch-linux.xyz/c9qhakma.png",
       bioLink: "https://e-z.bio/vx",
       socialCount: "2050",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Always",
       image: "https://arch-linux.xyz/t1zkap63.png",
       bioLink: "https://e-z.bio/az",
       socialCount: "2034",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Eva",
       image: "https://arch-linux.xyz/jd4fkwjs.png",
       bioLink: "https://e-z.bio/eva",
       socialCount: "1754",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Kyuiki",
       image: "https://arch-linux.xyz/jld517td.png",
       bioLink: "https://e-z.bio/ky",
       socialCount: "1218",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Loud",
       image: "https://arch-linux.xyz/imk3oqi3.png",
       bioLink: "https://e-z.bio/loud",
       socialCount: "1066",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "not_noob",
       image: "https://arch-linux.xyz/es9ddfjw.png",
       bioLink: "https://e-z.bio/ffs",
       socialCount: "750",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Karan",
       image: "https://arch-linux.xyz/95mufzns.png",
       bioLink: "https://e-z.bio/dma",
       socialCount: "603",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Keiran",
       image: "https://arch-linux.xyz/3cssfo64.png",
       bioLink: "https://e-z.bio/anon",
       socialCount: "524",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Bran",
       image: "https://arch-linux.xyz/3zh7wdcw.png",
       bioLink: "https://e-z.bio/glaive",
       socialCount: "490",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "Linqfy",
       image: "https://arch-linux.xyz/6xz6kcto.png",
       bioLink: "https://e-z.bio/qq",
       socialCount: "167",
-      primaryPlatform: <Eye className="w-4 h-4" />
+      primaryPlatform: <Eye className="w-4 h-4" />,
     },
     {
       username: "entity",
       image: "https://arch-linux.xyz/zt88b00o.png",
       bioLink: "https://e-z.bio/entity",
       socialCount: "14",
-      primaryPlatform: <Eye className="w-4 h-4" />
-    }
+      primaryPlatform: <Eye className="w-4 h-4" />,
+    },
   ];
 
   const customizationOptions = [
     {
       icon: <Palette className="w-5 h-5 text-purple-400" />,
       title: "Choose your style",
-      description: "Almost every aspect of your bio is wholly customizable"
+      description: "Almost every aspect of your bio is wholly customizable",
     },
     {
       icon: <Layout className="w-5 h-5 text-purple-400" />,
       title: "Layout",
-      description: "We have two distinct layouts to choose from to best suit your style"
+      description:
+        "We have two distinct layouts to choose from to best suit your style",
     },
     {
       icon: <LinkIcon className="w-5 h-5 text-purple-400" />,
       title: "Social links",
-      description: "Add your social links with any supported platforms or add your own"
-    }
+      description:
+        "Add your social links with any supported platforms or add your own",
+    },
   ];
 
   const premiumFeatures = [
     {
       icon: <Globe className="w-5 h-5" />,
-      title: "Secondary bio alias"
+      title: "Secondary bio alias",
     },
     {
       icon: <Palette className="w-5 h-5" />,
-      title: "Use unicode in your bio alias"
+      title: "Use unicode in your bio alias",
     },
     {
       icon: <Star className="w-5 h-5" />,
-      title: "Donator badge on your bio"
+      title: "Donator badge on your bio",
     },
     {
       icon: <Shield className="w-5 h-5" />,
-      title: "Increased upload limit"
-    }
+      title: "Increased upload limit",
+    },
   ];
 
   const supportChannels = [
@@ -165,20 +169,20 @@ export default function BioDocs() {
       icon: <Mail className="w-5 h-5 text-purple-400" />,
       href: "mailto:support@e-z.gg",
       title: "Email Support",
-      description: "Our support email is support@e-z.gg"
+      description: "Our support email is support@e-z.gg",
     },
     {
       icon: <MessageCircle className="w-5 h-5 text-purple-400" />,
       href: "https://discord.gg/ez",
       title: "Discord",
-      description: "Get staff and community support in our Discord"
+      description: "Get staff and community support in our Discord",
     },
     {
       icon: <FileText className="w-5 h-5 text-purple-400" />,
       href: "/docs/faq",
       title: "FAQ",
-      description: "Browse some of our common questions"
-    }
+      description: "Browse some of our common questions",
+    },
   ];
 
   const bestPractices = [
@@ -186,7 +190,7 @@ export default function BioDocs() {
     "Use high-quality images",
     "Organize links by importance",
     "Monitor your analytics",
-    "Keep your profile information current"
+    "Keep your profile information current",
   ];
 
   return (
@@ -224,7 +228,9 @@ export default function BioDocs() {
                   {feature.icon}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold mb-2">{feature.title}</h2>
+                  <h2 className="text-2xl font-semibold mb-2">
+                    {feature.title}
+                  </h2>
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </div>
@@ -341,14 +347,17 @@ export default function BioDocs() {
               <span className="text-gray-400">Example API request</span>
             </div>
             <code className="text-purple-400">
-            curl -X POST &apos;https://api.e-z.host/files&apos; \<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;-H &apos;key: YOUR_API_KEY&apos; \<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;-F &apos;file=@/path/to/file&apos;
+              curl -X POST &apos;https://api.e-z.host/files&apos; \<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;-H &apos;key: YOUR_API_KEY&apos; \<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;-F &apos;file=@/path/to/file&apos;
             </code>
           </div>
           <div className="mt-4 flex items-center gap-2">
             <Code className="w-4 h-4 text-purple-400" />
-            <a href="/docs/api" className="text-purple-400 hover:text-purple-300 flex items-center gap-1">
+            <a
+              href="/docs/api"
+              className="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+            >
               View full API documentation
               <ExternalLink className="w-4 h-4" />
             </a>
@@ -361,14 +370,8 @@ export default function BioDocs() {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {supportChannels.map((channel, index) => (
-            <Link 
-              href={channel.href}
-              key={index}
-              className="block h-full"
-            >
-              <div
-                className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:bg-gray-900/70 transition-all"
-              >
+            <Link href={channel.href} key={index} className="block h-full">
+              <div className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:bg-gray-900/70 transition-all">
                 <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                   {channel.icon}
                 </div>
@@ -404,9 +407,16 @@ export default function BioDocs() {
             Need additional help? Our support team is always here to assist you.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <a href="/terms" className="text-purple-400 hover:text-purple-300">Terms of Service</a>
+            <a href="/terms" className="text-purple-400 hover:text-purple-300">
+              Terms of Service
+            </a>
             <span className="text-gray-600">•</span>
-            <a href="/privacy" className="text-purple-400 hover:text-purple-300">Privacy Policy</a>
+            <a
+              href="/privacy"
+              className="text-purple-400 hover:text-purple-300"
+            >
+              Privacy Policy
+            </a>
           </div>
         </motion.footer>
       </div>
