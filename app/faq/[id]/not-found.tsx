@@ -10,7 +10,7 @@ export default function NotFound() {
             Are you lost?
           </h1>
           <p className="text-lg text-zinc-400">
-            Sorry, we couldn't find the question you're looking for.
+            Sorry, we couldn&apos;t find the question you&apos;re looking for.
           </p>
           <Link
             href="/faq"

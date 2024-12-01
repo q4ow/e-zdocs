@@ -10,10 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://e-z.software"),
   title: "E-Z Services Documentation",
-  description: "Unofficial documentation for E-Z Services",
+  description: "Official documentation for E-Z Services",
   openGraph: {
     title: "E-Z Services Documentation",
-    description: "Unofficial documentation for E-Z Services",
+    description: "Official documentation for E-Z Services",
     images: [
       {
         url: "https://assets.e-z.gg/e-ztransparent.png",

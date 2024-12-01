@@ -39,7 +39,7 @@ export default function FAQPage() {
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Find answers to common questions about E-Z services.
             <br />
-            Can't find what you're looking for?
+            Can&apos;t find what you&apos;re looking for?
           </p>
           <button
             onClick={() => window.open("/discord", "_blank")}

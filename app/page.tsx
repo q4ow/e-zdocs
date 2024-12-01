@@ -78,7 +78,6 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="space-y-24 sm:space-y-32">
-          {/* Hero Section */}
           <div className="text-center space-y-8 pt-8">
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -121,7 +120,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Stats Section */}
           <motion.div
             ref={statsRef}
             initial={{ y: 50, opacity: 0 }}
@@ -134,7 +132,6 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Features Section */}
           <div ref={featuresRef}>
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
@@ -160,7 +157,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* CTA Section */}
           <motion.div
             ref={ctaRef}
             initial={{ y: 50, opacity: 0 }}
