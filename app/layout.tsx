@@ -17,8 +17,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://assets.e-z.gg/e-ztransparent.png",
+        width: 300,
+        height: 300,
       },
     ],
+  },
+  twitter: {
+    card: "summary",
   },
 };
 
