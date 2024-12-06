@@ -176,6 +176,55 @@ Previous sessions will be logged out`,
       "Please don't spam the chat in our Discord while waiting for a staff response",
       "You should probably try using a password manager like Proton Pass (my personal choice)",
     ],
+    lastUpdated: "2024-12-06",
+  },
+  {
+    id: "placeholders",
+    question: "How do I make the file info show on my embeds?",
+    shortAnswer:
+      "E-Z Host supports various dynamic placeholders that expand when your file is uploaded, such as {filename}, {size}, and {date}.",
+    category: "Embeds",
+    sections: [
+      {
+        title: "Available Placeholders",
+        type: "bullets",
+        content: `
+  {size} - shows the file size in appropriate units
+  {username} - your username on the site - NOT your bio handle
+  {filename} - expands to the name of the uploaded file
+  {uploads} - your total uploads to E-Z.host
+  {domain} - the domain you are currently using (e.g. arch-linux.fun)
+  {date} - the date of the upload - DD/MM/YYYY
+  {time} - the time of the upload - HH.mm.SS
+  {timestamp} - combines {date} and {time} - DD/MM/YYYY, HH.mm.SS
+  {fakeurl} - the fake URL you have configured in your host settings
+  {customfilepath} - the custom file path you have configured in your host settings
+  `,
+      },
+      {
+        title: "Usage Example",
+        type: "code",
+        content: `
+File: {filename}
+Uploaded on {date} at {time}
+Size: {size}
+Uploads: {uploads}
+Storage used: {storage}
+    `,
+      },
+      {
+        title: "Important Notes",
+        type: "warning",
+        content:
+          "Placeholders are case-sensitive and must be enclosed in curly braces. Invalid placeholders will not be replaced at all.",
+      },
+    ],
+    relatedQuestions: [],
+    additionalNotes: [
+      "Placeholders can be used in all embed fields",
+      "Some placeholders may be blank if you have not configured them in your settings",
+      "Both standard and premium users have access to all embeds",
+    ],
     lastUpdated: "2024-12-01",
   },
 ];
