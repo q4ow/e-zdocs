@@ -252,7 +252,7 @@ More coming soon!`,
     additionalNotes: [
       "Features may be subject to change",
       "A standard invite must be purchased before you can upgrade",
-      "Standard users can access all aspects of our services, premium just provides more enhancements"
+      "Standard users can access all aspects of our services, premium just provides more enhancements",
     ],
     lastUpdated: "2024-12-08",
   },

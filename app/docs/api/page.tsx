@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/api/code-block";
 import { Key, Lock, AlertCircle, Terminal } from "lucide-react";
+import Link from "next/link";
 
 export default function ApiDocs() {
   const endpoints = [
@@ -207,12 +208,12 @@ export default function ApiDocs() {
                 </li>
                 <li className="text-gray-300">
                   • Check our{" "}
-                  <a
+                  <Link
                     href="/faq"
                     className="text-purple-400 hover:text-purple-300"
                   >
                     FAQ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

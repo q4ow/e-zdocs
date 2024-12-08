@@ -81,7 +81,10 @@ export default function Home() {
     margin: "-100px",
   });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
-  const showcaseInView = useInView(showcaseRef, { once: true, margin: "-100px" });
+  const showcaseInView = useInView(showcaseRef, {
+    once: true,
+    margin: "-100px",
+  });
 
   return (
     <div className="min-h-screen pl-[80px] lg:pl-[256px] -ml-[80px] lg:-ml-[256px] flex justify-center">
@@ -104,7 +107,11 @@ export default function Home() {
                 <motion.span
                   initial={{ backgroundPosition: "0% 50%" }}
                   animate={{ backgroundPosition: "100% 50%" }}
-                  transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
                   className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
                   style={{ backgroundSize: "200% 100%" }}
                 >
@@ -160,9 +167,9 @@ export default function Home() {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)"
+                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
                 }}
                 className="relative overflow-hidden rounded-lg bg-blue-950/10 p-6 backdrop-blur-sm border border-blue-900/20"
               >
@@ -178,9 +185,7 @@ export default function Home() {
             animate={showcaseInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <motion.div
-              className="relative flex justify-center items-center h-full"
-            >
+            <motion.div className="relative flex justify-center items-center h-full">
               <motion.div
                 className="relative w-[420px] h-[240px]"
                 whileHover="expanded"
@@ -199,8 +204,8 @@ export default function Home() {
                         transition: {
                           type: "spring",
                           stiffness: 300,
-                          damping: 20
-                        }
+                          damping: 20,
+                        },
                       },
                       expanded: {
                         x: (index - 1) * 320,
@@ -211,12 +216,12 @@ export default function Home() {
                           type: "spring",
                           stiffness: 300,
                           damping: 20,
-                          delay: index * 0.1
-                        }
-                      }
+                          delay: index * 0.1,
+                        },
+                      },
                     }}
                     style={{
-                      zIndex: showcaseImages.length - index
+                      zIndex: showcaseImages.length - index,
                     }}
                   >
                     <Image
@@ -240,14 +245,20 @@ export default function Home() {
           >
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
-              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+              animate={
+                featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
+              }
               transition={{ duration: 0.5 }}
               className="text-2xl sm:text-3xl font-bold text-center mb-16"
             >
               <motion.span
                 initial={{ backgroundPosition: "0% 50%" }}
                 animate={{ backgroundPosition: "100% 50%" }}
-                transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
                 style={{ backgroundSize: "200% 100%" }}
               >
@@ -256,16 +267,18 @@ export default function Home() {
             </motion.h2>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
-              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+              animate={
+                featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }
+              }
               transition={{ duration: 0.7, delay: 0.2 }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
             >
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
-                    boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)"
+                    boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
                   }}
                 >
                   <FeatureCard {...feature} index={index} />
@@ -282,15 +295,19 @@ export default function Home() {
             className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 mt-24 sm:mt-32 [box-shadow:_0_0_30px_rgb(59_130_246_/_0.1)]"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0],
-                filter: ["drop-shadow(0 0 0px #60A5FA)", "drop-shadow(0 0 10px #60A5FA)", "drop-shadow(0 0 0px #60A5FA)"]
+                filter: [
+                  "drop-shadow(0 0 0px #60A5FA)",
+                  "drop-shadow(0 0 10px #60A5FA)",
+                  "drop-shadow(0 0 0px #60A5FA)",
+                ],
               }}
-              transition={{ 
+              transition={{
                 duration: 2,
                 repeat: Infinity,
-                repeatType: "reverse"
+                repeatType: "reverse",
               }}
             >
               <Star className="w-12 h-12 text-blue-400 mx-auto" />
@@ -303,10 +320,7 @@ export default function Home() {
               <br />
               Get started today!
             </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/docs/getting-started"
                 className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 [box-shadow:_0_0_15px_rgb(59_130_246_/_0.5)]"

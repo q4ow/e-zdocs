@@ -34,16 +34,12 @@ const menuItems = [
   {
     name: "API Reference",
     icon: Code2,
-    subItems: [
-      { name: "Overview", href: "/docs/api" },
-    ],
+    subItems: [{ name: "Overview", href: "/docs/api" }],
   },
   {
     name: "Configuration",
     icon: Settings,
-    subItems: [
-      { name: "Overview", href: "/docs/config" },
-    ],
+    subItems: [{ name: "Overview", href: "/docs/config" }],
   },
 ];
 
@@ -90,7 +86,7 @@ export function Navigation() {
           "fixed lg:relative flex flex-col h-screen bg-zinc-950/95 backdrop-blur-sm border-r border-zinc-500/20 transition-all duration-300 ease-in-out z-40",
           isCollapsed ? "w-20" : "w-64",
           "lg:translate-x-0",
-          isOpen ? "translate-x-0" : "-translate-x-full"
+          isOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
         <div className="flex h-full flex-col">
@@ -100,7 +96,7 @@ export function Navigation() {
               href="/"
               className={cn(
                 "flex items-center gap-3 font-semibold text-zinc-100",
-                isCollapsed && "justify-center"
+                isCollapsed && "justify-center",
               )}
             >
               <div className="relative w-8 h-8 flex-shrink-0">
@@ -134,7 +130,7 @@ export function Navigation() {
               <ChevronLeft
                 className={cn(
                   "h-5 w-5 transition-transform",
-                  isCollapsed && "rotate-180"
+                  isCollapsed && "rotate-180",
                 )}
               />
               <span className="sr-only">Toggle navigation</span>
@@ -150,7 +146,9 @@ export function Navigation() {
               )}
 
               {menuItems.map((item) => {
-                const isActive = item.subItems.some((subItem) => pathname.startsWith(subItem.href));
+                const isActive = item.subItems.some((subItem) =>
+                  pathname.startsWith(subItem.href),
+                );
                 const Icon = item.icon;
                 const hasSubItems = item.subItems && item.subItems.length > 0;
                 const isExpanded = openSection === item.name;
@@ -168,22 +166,32 @@ export function Navigation() {
                       <div
                         className={cn(
                           "w-full h-10 flex items-center gap-3 px-3 relative group rounded-md transition-colors",
-                          isActive || isExpanded ? "bg-blue-500/10 text-blue-400 font-medium" : "hover:bg-zinc-800/50 hover:text-zinc-100"
+                          isActive || isExpanded
+                            ? "bg-blue-500/10 text-blue-400 font-medium"
+                            : "hover:bg-zinc-800/50 hover:text-zinc-100",
                         )}
                       >
-                        <Icon className={cn(
-                          "w-5 h-5 flex-shrink-0",
-                          (isActive || isExpanded) ? "text-blue-400" : "text-zinc-400 group-hover:text-zinc-100"
-                        )} />
+                        <Icon
+                          className={cn(
+                            "w-5 h-5 flex-shrink-0",
+                            isActive || isExpanded
+                              ? "text-blue-400"
+                              : "text-zinc-400 group-hover:text-zinc-100",
+                          )}
+                        />
                         {!isCollapsed && (
                           <>
-                            <span className="truncate flex-1 text-left">{item.name}</span>
+                            <span className="truncate flex-1 text-left">
+                              {item.name}
+                            </span>
                             {hasSubItems && (
-                              <ChevronDown 
+                              <ChevronDown
                                 className={cn(
                                   "w-4 h-4 transition-transform",
                                   isExpanded && "rotate-180",
-                                  (isActive || isExpanded) ? "text-blue-400" : "text-zinc-400 group-hover:text-zinc-100"
+                                  isActive || isExpanded
+                                    ? "text-blue-400"
+                                    : "text-zinc-400 group-hover:text-zinc-100",
                                 )}
                               />
                             )}
@@ -218,10 +226,12 @@ export function Navigation() {
                                     "flex items-center w-full h-8 pl-4 rounded-md transition-colors",
                                     pathname === subItem.href
                                       ? "text-blue-400 bg-blue-500/5 font-medium"
-                                      : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50"
+                                      : "text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50",
                                   )}
                                 >
-                                  <span className="text-sm">{subItem.name}</span>
+                                  <span className="text-sm">
+                                    {subItem.name}
+                                  </span>
                                 </div>
                               </Link>
                             ))}
@@ -248,15 +258,23 @@ export function Navigation() {
                     <div
                       className={cn(
                         "w-full h-10 flex items-center gap-3 px-3 relative group rounded-md transition-colors",
-                        isActive ? "bg-blue-500/10 text-blue-400 font-medium" : "hover:bg-zinc-800/50 hover:text-zinc-100"
+                        isActive
+                          ? "bg-blue-500/10 text-blue-400 font-medium"
+                          : "hover:bg-zinc-800/50 hover:text-zinc-100",
                       )}
                     >
-                      <Icon className={cn(
-                        "w-5 h-5 flex-shrink-0",
-                        isActive ? "text-blue-400" : "text-zinc-400 group-hover:text-zinc-100"
-                      )} />
+                      <Icon
+                        className={cn(
+                          "w-5 h-5 flex-shrink-0",
+                          isActive
+                            ? "text-blue-400"
+                            : "text-zinc-400 group-hover:text-zinc-100",
+                        )}
+                      />
                       {!isCollapsed && (
-                        <span className="truncate flex-1 text-left">{item.name}</span>
+                        <span className="truncate flex-1 text-left">
+                          {item.name}
+                        </span>
                       )}
                       {isActive && (
                         <motion.div
@@ -281,7 +299,7 @@ export function Navigation() {
               rel="noopener noreferrer"
               className={cn(
                 "flex items-center gap-3 px-3 py-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors rounded-md hover:bg-zinc-800/50",
-                isCollapsed && "justify-center px-2"
+                isCollapsed && "justify-center px-2",
               )}
             >
               <ExternalLink className="w-5 h-5 flex-shrink-0" />
