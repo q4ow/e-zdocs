@@ -156,11 +156,11 @@ export default function BioDocs() {
     },
     {
       icon: <Star className="w-5 h-5" />,
-      title: "Donator badge on your bio",
+      title: "Sexy donator badge",
     },
     {
       icon: <Shield className="w-5 h-5" />,
-      title: "Increased upload limit",
+      title: "Donator role on discord",
     },
   ];
 
@@ -179,7 +179,7 @@ export default function BioDocs() {
     },
     {
       icon: <FileText className="w-5 h-5 text-purple-400" />,
-      href: "/docs/faq",
+      href: "/faq",
       title: "FAQ",
       description: "Browse some of our common questions",
     },
@@ -202,7 +202,7 @@ export default function BioDocs() {
           className="text-center space-y-4"
         >
           <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            E-Z.bio Documentation
+            E-Z Bio
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Your comprehensive guide to creating a stunning bio page

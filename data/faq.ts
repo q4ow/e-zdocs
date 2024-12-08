@@ -227,6 +227,35 @@ Storage used: {storage}
     ],
     lastUpdated: "2024-12-01",
   },
+
+  {
+    id: "premium-features",
+    question: "What are the premium features?",
+    shortAnswer:
+      "E-Z Host and E-Z Bio offer a range of enhancements for premium users for a price that seems too good to be true!",
+    category: "Services",
+    sections: [
+      {
+        title: "Premium Features",
+        type: "bullets",
+        content: `
+Extra upload limit per upload (From 25mb to 100mb)
+A secondary alias for your bio page
+Ability to use special unicode characters and emojis in url
+1 extra invite per invite wave (2 total)
+Donator role in the discord server
+Donator badge on e-z.bio
+More coming soon!`,
+      },
+    ],
+    relatedQuestions: ["features", "account-creation"],
+    additionalNotes: [
+      "Features may be subject to change",
+      "A standard invite must be purchased before you can upgrade",
+      "Standard users can access all aspects of our services, premium just provides more enhancements"
+    ],
+    lastUpdated: "2024-12-08",
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight,
   Globe,
@@ -12,6 +12,7 @@ import {
   Heart,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
 import { useRef } from "react";
@@ -57,15 +58,22 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "17684", label: "Active Users" },
-    { value: "1854204", label: "Unique Views" },
-    { value: "4458911", label: "Uploads" },
+    { value: "18K+", label: "Active Users" },
+    { value: "2M+", label: "Unique Views" },
+    { value: "4.6M+", label: "Uploads" },
     { value: "24/7", label: "Support" },
+  ];
+
+  const showcaseImages = [
+    { src: "/assets/home/dashboard.png", alt: "Dashboard Example" },
+    { src: "/assets/home/e-zhost.png", alt: "E-Z.host homepage" },
+    { src: "/assets/home/e-zbio.png", alt: "E-Z.bio homepage" },
   ];
 
   const statsRef = useRef(null);
   const featuresRef = useRef(null);
   const ctaRef = useRef(null);
+  const showcaseRef = useRef(null);
 
   const statsInView = useInView(statsRef, { once: true, margin: "-100px" });
   const featuresInView = useInView(featuresRef, {
@@ -73,25 +81,37 @@ export default function Home() {
     margin: "-100px",
   });
   const ctaInView = useInView(ctaRef, { once: true, margin: "-100px" });
+  const showcaseInView = useInView(showcaseRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="space-y-24 sm:space-y-32">
-          <div className="text-center space-y-8 pt-8">
+    <div className="min-h-screen pl-[80px] lg:pl-[256px] -ml-[80px] lg:-ml-[256px] flex justify-center">
+      <div className="max-w-6xl w-full px-4 py-12 sm:px-6 lg:px-8">
+        <div className="flex flex-col min-h-[200vh]">
+          <motion.div
+            className="text-center space-y-8 pt-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
                 Welcome to{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 glow-text-blue">
+                <motion.span
+                  initial={{ backgroundPosition: "0% 50%" }}
+                  animate={{ backgroundPosition: "100% 50%" }}
+                  transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
+                  style={{ backgroundSize: "200% 100%" }}
+                >
                   E-Z Docs
-                </span>
+                </motion.span>
               </h1>
-              <p className="text-lg sm:text-xl leading-8 text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto [text-shadow:_0_0_30px_rgb(59_130_246_/_0.2)]">
                 High-quality and easy to use web services. We strive to offer
                 the best experience possible for our users.
               </p>
@@ -103,69 +123,179 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex flex-col sm:flex-row justify-center gap-4 pt-4"
             >
-              <Link
-                href="/docs/getting-started"
-                className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors flex items-center justify-center gap-2 glow-button-blue"
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Get Started
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/docs/api"
-                className="rounded-lg px-6 py-3 text-sm font-semibold text-blue-400 ring-1 ring-blue-400/20 hover:ring-blue-400/40 transition-all flex items-center justify-center gap-2"
+                <Link
+                  href="/docs/getting-started"
+                  className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 flex items-center justify-center gap-2 [box-shadow:_0_0_15px_rgb(59_130_246_/_0.5)]"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                API Documentation
-                <Code className="w-4 h-4" />
-              </Link>
+                <Link
+                  href="/docs/api"
+                  className="rounded-lg px-6 py-3 text-sm font-semibold text-blue-400 ring-1 ring-blue-400/20 flex items-center justify-center gap-2 hover:ring-blue-400/40"
+                >
+                  API Documentation
+                  <Code className="w-4 h-4" />
+                </Link>
+              </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
 
           <motion.div
             ref={statsRef}
             initial={{ y: 50, opacity: 0 }}
             animate={statsInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 mt-32 mb-40"
           >
             {stats.map((stat, index) => (
-              <StatCard key={index} {...stat} index={index} />
+              <motion.div
+                key={index}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)"
+                }}
+                className="relative overflow-hidden rounded-lg bg-blue-950/10 p-6 backdrop-blur-sm border border-blue-900/20"
+              >
+                <StatCard {...stat} index={index} />
+              </motion.div>
             ))}
           </motion.div>
 
-          <div ref={featuresRef}>
+          <motion.div
+            ref={showcaseRef}
+            className="relative h-[50vh] mt-24 sm:mt-32"
+            initial={{ opacity: 0 }}
+            animate={showcaseInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <motion.div
+              className="relative flex justify-center items-center h-full"
+            >
+              <motion.div
+                className="relative w-[420px] h-[240px]"
+                whileHover="expanded"
+                initial="stacked"
+              >
+                {showcaseImages.map((image, index) => (
+                  <motion.div
+                    key={index}
+                    className="absolute w-[300px] h-[200px] rounded-xl overflow-hidden"
+                    variants={{
+                      stacked: {
+                        x: -30 + index * 60,
+                        y: index * 20,
+                        rotate: -10 + index * 5,
+                        scale: 1,
+                        transition: {
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 20
+                        }
+                      },
+                      expanded: {
+                        x: (index - 1) * 320,
+                        y: 0,
+                        rotate: 0,
+                        scale: 1.1,
+                        transition: {
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 20,
+                          delay: index * 0.1
+                        }
+                      }
+                    }}
+                    style={{
+                      zIndex: showcaseImages.length - index
+                    }}
+                  >
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            ref={featuresRef}
+            className="mt-24 sm:mt-32"
+            initial={{ opacity: 0 }}
+            animate={featuresInView ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.7 }}
+          >
             <motion.h2
               initial={{ y: 30, opacity: 0 }}
-              animate={
-                featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }
-              }
+              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-2xl sm:text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300 glow-text-blue"
+              className="text-2xl sm:text-3xl font-bold text-center mb-16"
             >
-              But why choose us?
+              <motion.span
+                initial={{ backgroundPosition: "0% 50%" }}
+                animate={{ backgroundPosition: "100% 50%" }}
+                transition={{ duration: 5, repeat: Infinity, repeatType: "reverse" }}
+                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
+                style={{ backgroundSize: "200% 100%" }}
+              >
+                But why choose us?
+              </motion.span>
             </motion.h2>
             <motion.div
               initial={{ y: 50, opacity: 0 }}
-              animate={
-                featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }
-              }
+              animate={featuresInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
             >
               {features.map((feature, index) => (
-                <FeatureCard key={index} {...feature} index={index} />
+                <motion.div
+                  key={index}
+                  whileHover={{ 
+                    scale: 1.05,
+                    boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)"
+                  }}
+                >
+                  <FeatureCard {...feature} index={index} />
+                </motion.div>
               ))}
             </motion.div>
-          </div>
+          </motion.div>
 
           <motion.div
             ref={ctaRef}
-            initial={{ y: 50, opacity: 0 }}
-            animate={ctaInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={ctaInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 glow-card"
+            className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 mt-24 sm:mt-32 [box-shadow:_0_0_30px_rgb(59_130_246_/_0.1)]"
           >
-            <Star className="w-12 h-12 text-blue-400 mx-auto glow-icon-blue" />
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">
+            <motion.div
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0],
+                filter: ["drop-shadow(0 0 0px #60A5FA)", "drop-shadow(0 0 10px #60A5FA)", "drop-shadow(0 0 0px #60A5FA)"]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            >
+              <Star className="w-12 h-12 text-blue-400 mx-auto" />
+            </motion.div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white [text-shadow:_0_0_30px_rgb(59_130_246_/_0.3)]">
               Ready to get started?
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg">
@@ -173,13 +303,18 @@ export default function Home() {
               <br />
               Get started today!
             </p>
-            <Link
-              href="/docs/getting-started"
-              className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 hover:bg-blue-500 transition-colors glow-button-blue"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Get Started
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+              <Link
+                href="/docs/getting-started"
+                className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 [box-shadow:_0_0_15px_rgb(59_130_246_/_0.5)]"
+              >
+                Get Started
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </div>

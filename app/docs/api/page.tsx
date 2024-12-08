@@ -208,7 +208,7 @@ export default function ApiDocs() {
                 <li className="text-gray-300">
                   • Check our{" "}
                   <a
-                    href="/docs/faq"
+                    href="/faq"
                     className="text-purple-400 hover:text-purple-300"
                   >
                     FAQ
