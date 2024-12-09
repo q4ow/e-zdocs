@@ -256,6 +256,32 @@ More coming soon!`,
     ],
     lastUpdated: "2024-12-08",
   },
+  {
+    id: "public-domains",
+    question: "Can I use more domains?",
+    shortAnswer:
+      "E-Z Host and E-Z Bio provide a range of public domains for you to use, free of charge. You can use them to share your files, shortened URLs, personal bio, or even donate your own domain!",
+    category: "Services",
+    sections: [
+      {
+        title: "Wait, what?",
+        type: "bullets",
+        content: `
+  Share your links with funny domains
+  Donate your own domain to use it with our service
+  Get free premium for donating a public domain
+  And more!`,
+      },
+    ],
+    relatedQuestions: ["features", "premium-features"],
+    additionalNotes: [
+      "Public domains are subject to expiration",
+      "You can use any public domain for free, but they can also be donated privately",
+      "Private domains will be for personal use, and public ones will be available for everyone to use",
+      "See the full list of available public domains, or donate your own, on the dashboard",
+    ],
+    lastUpdated: "2024-12-09",
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {
