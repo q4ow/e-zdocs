@@ -1,4 +1,4 @@
-import { redirect } from "next/dist/client/components/navigation";
+import { RedirectType, redirect } from "next/navigation";
 
 export const dynamic = "force-static";
 

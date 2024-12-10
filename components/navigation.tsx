@@ -36,11 +36,12 @@ const menuItems = [
     icon: Code2,
     subItems: [{ name: "Overview", href: "/docs/api" }],
   },
-  {
+  /*{
     name: "Configuration",
     icon: Settings,
     subItems: [{ name: "Overview", href: "/docs/config" }],
   },
+  */
 ];
 
 const quickLinks = [
