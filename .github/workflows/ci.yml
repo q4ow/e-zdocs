@@ -21,6 +21,10 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
       - name: Install dependencies
         run: pnpm install
 
@@ -28,7 +32,7 @@ jobs:
         run: pnpm lint
 
       - name: Run Prettier check
-        run: pnpm format --check .
+        run: pnpm prettier --check .
 
   build:
     name: Build Project
@@ -44,6 +48,10 @@ jobs:
         with:
           node-version: 18
           cache: 'pnpm'
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
