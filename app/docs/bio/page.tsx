@@ -259,7 +259,10 @@ export default function BioDocs() {
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.02, borderColor: "rgba(168, 85, 247, 0.5)" }}
+                whileHover={{
+                  scale: 1.02,
+                  borderColor: "rgba(168, 85, 247, 0.5)",
+                }}
                 transition={{ delay: index * 0.1 }}
                 className="group relative block overflow-hidden rounded-xl bg-gray-900/50 border border-gray-800"
               >
@@ -307,7 +310,10 @@ export default function BioDocs() {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              whileHover={{ backgroundColor: "rgba(17, 24, 39, 0.7)", scale: 1.02 }}
+              whileHover={{
+                backgroundColor: "rgba(17, 24, 39, 0.7)",
+                scale: 1.02,
+              }}
               transition={{ delay: index * 0.1 }}
               className="bg-gray-900/50 border border-gray-800 rounded-xl p-6"
             >
@@ -377,7 +383,10 @@ export default function BioDocs() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                whileHover={{ backgroundColor: "rgba(17, 24, 39, 0.7)", scale: 1.02 }}
+                whileHover={{
+                  backgroundColor: "rgba(17, 24, 39, 0.7)",
+                  scale: 1.02,
+                }}
                 transition={{ duration: 0.2 }}
                 className="h-full"
               >
@@ -385,8 +394,12 @@ export default function BioDocs() {
                   <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                     {channel.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{channel.title}</h3>
-                  <p className="text-gray-400 flex-grow">{channel.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {channel.title}
+                  </h3>
+                  <p className="text-gray-400 flex-grow">
+                    {channel.description}
+                  </p>
                 </div>
               </motion.div>
             </Link>

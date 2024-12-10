@@ -29,12 +29,37 @@ export async function generateMetadata({
     return {
       title: "FAQ Not Found - E-Z Docs",
       description: "The requested FAQ could not be found.",
+      openGraph: {
+        title: "FAQ Not Found - E-Z Docs",
+        description: "The requested FAQ could not be found.",
+      },
+      twitter: {
+        card: "summary",
+        title: "FAQ Not Found - E-Z Docs",
+        description: "The requested FAQ could not be found.",
+      },
     };
   }
 
+  const title = `${faq.question} - E-Z Docs FAQ`;
+  const description = faq.shortAnswer;
+
   return {
-    title: `${faq.question} - E-Z Docs FAQ`,
-    description: faq.shortAnswer,
+    metadataBase: new URL("https://e-z.software"),
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      publishedTime: faq.lastUpdated,
+      section: faq.category,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
   };
 }
 

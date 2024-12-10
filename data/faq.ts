@@ -282,6 +282,86 @@ More coming soon!`,
     ],
     lastUpdated: "2024-12-09",
   },
+  {
+    id: "authentication",
+    question: "How does authentication work on E-Z?",
+    shortAnswer:
+      "E-Z uses a token-based authentication system with refresh tokens stored in cookies and access tokens in memory.",
+    category: "Account Management",
+    sections: [
+      {
+        title: "Authentication Flow",
+        type: "steps",
+        content: `
+  1. You log into your account
+  2. A refresh token is stored in your browser cookies
+  3. An access token is stored in the application's memory
+  4. Access token refreshes every 15 minutes using the /auth/token endpoint
+  5. Each refresh provides both a new access token and refresh token`,
+      },
+      {
+        title: "Token Expiration without 'Remember Me'",
+        type: "bullets",
+        content: `
+  Refresh token cleared when browser closes
+  Session ends immediately`,
+      },
+      {
+        title: "Token Expiration with 'Remember Me'",
+        type: "bullets",
+        content: `
+  Refresh token persists for 7 days
+  Token deleted after 7 days of inactivity
+  Each site visit resets the 7-day timer`,
+      },
+      {
+        title: "Security Notes",
+        type: "warning",
+        content: `
+  Never share your tokens with anyone
+  Use "Remember Me" only on trusted devices
+  Log out properly to clear all tokens
+  Enable 2FA for additional security`,
+      },
+    ],
+    relatedQuestions: ["account-security", "password-reset"],
+    additionalNotes: [
+      "Tokens are encrypted and secure",
+      "API requests require a valid API key, separate from access tokens",
+    ],
+    lastUpdated: "2024-12-10",
+  },
+  {
+    id: "waves",
+    question: "When is the next invite wave?",
+    shortAnswer:
+      "Invite waves are rare and unscheduled. We will know of them no sooner than you will.",
+    category: "Services",
+    sections: [
+      {
+        title: "Invite Wave Information",
+        type: "text",
+        content: `
+      Invite waves are not scheduled and can happen at any time. We announce them on our Discord server. Make sure to check the announcements channel regularly.`,
+      },
+      {
+        title: "How to Get Invites",
+        type: "bullets",
+        content: `
+      Participate in an invite wave
+      Receive one from another user
+      Purchase an invite code from our website`,
+      },
+      {
+        title: "Important Notes",
+        type: "warning",
+        content: `
+      You get one invite per wave, unless you have premium
+      Do not share your invite code with others
+      Each invite code is single-use only`,
+      },
+    ],
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {

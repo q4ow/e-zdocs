@@ -34,7 +34,10 @@ const menuItems = [
   {
     name: "API Reference",
     icon: Code2,
-    subItems: [{ name: "Overview", href: "/docs/api" }],
+    subItems: [
+      { name: "Overview", href: "/docs/api" },
+      { name: "Upload", href: "/docs/api/upload" },
+    ],
   },
   /*{
     name: "Configuration",
@@ -91,7 +94,6 @@ export function Navigation() {
         )}
       >
         <div className="flex h-full flex-col">
-          {/* Header */}
           <div className="flex h-[60px] items-center justify-between px-4 border-b border-zinc-800/50">
             <Link
               href="/"
