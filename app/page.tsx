@@ -16,6 +16,7 @@ import Image from "next/image";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
 import { useRef } from "react";
+import Typewriter from "@/components/typewriter";
 
 export default function Home() {
   const features = [
@@ -105,22 +106,40 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
+              <h1 className="text-sm sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
                 Welcome to{" "}
-                <motion.span
-                  initial={{ backgroundPosition: "0% 50%" }}
-                  animate={{ backgroundPosition: "100% 50%" }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue"
-                  style={{ backgroundSize: "200% 100%" }}
-                >
-                  E-Z Docs
-                </motion.span>
+                
               </h1>
+              <motion.span
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <motion.span
+                    initial={{ backgroundPosition: "0% 50%" }}
+                    animate={{
+                      backgroundPosition: ["0% 50%", "100% 50%"],
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                    }}
+                    className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
+                    style={{ backgroundSize: "200% 100%" }}
+                  >
+                    <Typewriter
+                      options={{
+                        strings: ["E-Z Docs", "E-Z Host", "E-Z Bio"],
+                        autoStart: true,
+                        loop: true,
+                        delay: 50,
+                        deleteSpeed: 1,
+                      }}
+                    />
+                  </motion.span>
+                </motion.span>
               <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto glow-text-blue">
                 High-quality and easy to use web services. We strive to offer
                 the best experience possible for our users.
@@ -174,7 +193,7 @@ export default function Home() {
                   scale: 1.05,
                   boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
                 }}
-                className="relative overflow-hidden rounded-lg bg-blue-950/10 p-6 backdrop-blur-sm border border-blue-900/20 glow-card"
+                className="relative overflow-hidden rounded-lg p-6 backdrop-blur-sm border glow-card"
               >
                 <StatCard {...stat} index={index} />
               </motion.div>
@@ -198,7 +217,7 @@ export default function Home() {
                 {showcaseImages.map((image, index) => (
                   <motion.div
                     key={index}
-                    className="absolute w-[300px] h-[200px] rounded-xl overflow-hidden"
+                    className="absolute w-[300px] h-[200px] rounded-xl overflow-hidden glow-card"
                     variants={{
                       stacked: {
                         x: -30 + index * 60,
@@ -296,7 +315,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={ctaInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 mt-24 sm:mt-32 glow-card"
+            className="text-center space-y-8 rounded-2xl p-8 sm:p-12 mt-24 sm:mt-32 glow-card"
           >
             <motion.div
               animate={{
