@@ -37,6 +37,8 @@ const menuItems = [
     subItems: [
       { name: "Overview", href: "/docs/api" },
       { name: "Upload", href: "/docs/api/upload" },
+      { name: "Shortener", href: "/docs/api/shortener" },
+      { name: "Paste", href: "/docs/api/paste" },
     ],
   },
   /*{

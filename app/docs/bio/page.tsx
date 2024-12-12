@@ -194,56 +194,13 @@ export default function BioDocs() {
   return (
     <div className="min-h-screen text-white p-8">
       <div className="max-w-6xl mx-auto space-y-12">
-        <motion.header
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-4"
-        >
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            E-Z Bio
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Your comprehensive guide to creating a stunning bio page
-          </p>
-        </motion.header>
-
-        {/* <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              whileHover={{ backgroundColor: "rgba(17, 24, 39, 0.7)", scale: 1.02 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-8"
-            >
-              <div className="flex items-center gap-4">
-                <div className="bg-purple-500/10 p-3 rounded-lg">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h2 className="text-2xl font-semibold mb-2">
-                    {feature.title}
-                  </h2>
-                  <p className="text-gray-400">{feature.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.section> */}
-
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="space-y-6"
         >
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
               Featured Bios
             </h2>
             <p className="text-gray-400">
@@ -264,7 +221,7 @@ export default function BioDocs() {
                   borderColor: "rgba(168, 85, 247, 0.5)",
                 }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative block overflow-hidden rounded-xl bg-gray-900/50 border border-gray-800"
+                className="group relative block overflow-hidden rounded-xl bg-gray-900/50 border border-gray-800 glow-card"
               >
                 <div className="aspect-square overflow-hidden">
                   <motion.img
@@ -301,6 +258,39 @@ export default function BioDocs() {
         </motion.section>
 
         <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              whileHover={{
+                backgroundColor: "rgba(17, 24, 39, 0.7)",
+                scale: 1.02,
+              }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 glow-card"
+            >
+              <div className="flex items-center gap-4">
+                <div className="bg-purple-500/10 p-3 rounded-lg">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold mb-2">
+                    {feature.title}
+                  </h2>
+                  <p className="text-gray-400">{feature.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.section>
+
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -315,7 +305,7 @@ export default function BioDocs() {
                 scale: 1.02,
               }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6"
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card"
             >
               <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                 {option.icon}
@@ -329,9 +319,11 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20"
+          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 glow-card"
         >
-          <h2 className="text-2xl font-semibold mb-6">Premium Features</h2>
+          <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
+            Premium Features
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {premiumFeatures.map((feature, index) => (
               <div key={index} className="flex items-center gap-3">
@@ -347,9 +339,11 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-900/50 border border-gray-800 rounded-xl p-8"
+          className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 glow-card"
         >
-          <h2 className="text-2xl font-semibold mb-6">API Access</h2>
+          <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
+            API Access
+          </h2>
           <div className="bg-gray-950 rounded-lg p-4 font-mono text-sm">
             <div className="flex items-center gap-2 mb-2">
               <Terminal className="w-4 h-4 text-purple-400" />
@@ -390,7 +384,7 @@ export default function BioDocs() {
                 transition={{ duration: 0.2 }}
                 className="h-full"
               >
-                <div className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6">
+                <div className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card">
                   <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                     {channel.icon}
                   </div>
@@ -409,13 +403,15 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-8"
+          className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-8 glow-card"
         >
-          <h2 className="text-2xl font-semibold mb-6">Best Practices</h2>
+          <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
+            Best Practices
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bestPractices.map((practice, index) => (
               <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 glow-icon-purple" />
                 <span className="text-gray-300">{practice}</span>
               </div>
             ))}

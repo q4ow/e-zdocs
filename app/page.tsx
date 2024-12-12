@@ -86,6 +86,9 @@ export default function Home() {
     margin: "-100px",
   });
 
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
   return (
     <div className="min-h-screen pl-[80px] lg:pl-[256px] -ml-[80px] lg:-ml-[256px] flex justify-center">
       <div className="max-w-6xl w-full px-4 py-12 sm:px-6 lg:px-8">
@@ -112,13 +115,13 @@ export default function Home() {
                     repeat: Infinity,
                     repeatType: "reverse",
                   }}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue"
                   style={{ backgroundSize: "200% 100%" }}
                 >
                   E-Z Docs
                 </motion.span>
               </h1>
-              <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto [text-shadow:_0_0_30px_rgb(59_130_246_/_0.2)]">
+              <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto glow-text-blue">
                 High-quality and easy to use web services. We strive to offer
                 the best experience possible for our users.
               </p>
@@ -136,7 +139,7 @@ export default function Home() {
               >
                 <Link
                   href="/docs/getting-started"
-                  className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 flex items-center justify-center gap-2 [box-shadow:_0_0_15px_rgb(59_130_246_/_0.5)]"
+                  className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 flex items-center justify-center gap-2 glow-button-blue"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4" />
@@ -171,7 +174,7 @@ export default function Home() {
                   scale: 1.05,
                   boxShadow: "0 0 20px rgba(59, 130, 246, 0.3)",
                 }}
-                className="relative overflow-hidden rounded-lg bg-blue-950/10 p-6 backdrop-blur-sm border border-blue-900/20"
+                className="relative overflow-hidden rounded-lg bg-blue-950/10 p-6 backdrop-blur-sm border border-blue-900/20 glow-card"
               >
                 <StatCard {...stat} index={index} />
               </motion.div>
@@ -180,10 +183,11 @@ export default function Home() {
 
           <motion.div
             ref={showcaseRef}
-            className="relative h-[50vh] mt-24 sm:mt-32"
+            className="relative sm:mt-32 mb-96"
             initial={{ opacity: 0 }}
             animate={showcaseInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
+            style={{ y }}
           >
             <motion.div className="relative flex justify-center items-center h-full">
               <motion.div
@@ -259,7 +263,7 @@ export default function Home() {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 [text-shadow:_0_0_30px_rgb(59_130_246_/_0.5)]"
+                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue"
                 style={{ backgroundSize: "200% 100%" }}
               >
                 But why choose us?
@@ -292,7 +296,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={ctaInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 mt-24 sm:mt-32 [box-shadow:_0_0_30px_rgb(59_130_246_/_0.1)]"
+            className="text-center space-y-8 bg-blue-950/10 rounded-2xl border border-blue-900/20 p-8 sm:p-12 mt-24 sm:mt-32 glow-card"
           >
             <motion.div
               animate={{
@@ -310,9 +314,9 @@ export default function Home() {
                 repeatType: "reverse",
               }}
             >
-              <Star className="w-12 h-12 text-blue-400 mx-auto" />
+              <Star className="w-12 h-12 text-blue-400 mx-auto glow-icon-blue" />
             </motion.div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white [text-shadow:_0_0_30px_rgb(59_130_246_/_0.3)]">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white glow-text-blue">
               Ready to get started?
             </h2>
             <p className="text-gray-400 max-w-xl mx-auto text-base sm:text-lg">
@@ -323,7 +327,7 @@ export default function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/docs/getting-started"
-                className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 [box-shadow:_0_0_15px_rgb(59_130_246_/_0.5)]"
+                className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 glow-button-blue"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4 ml-2" />

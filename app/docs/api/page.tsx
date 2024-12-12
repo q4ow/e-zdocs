@@ -2,7 +2,16 @@
 
 import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/api/code-block";
-import { Key, Lock, AlertCircle, Terminal } from "lucide-react";
+import {
+  Key,
+  Lock,
+  AlertCircle,
+  Terminal,
+  ArrowRight,
+  FileUp,
+  Link2,
+  Code,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function ApiDocs() {
@@ -11,6 +20,8 @@ export default function ApiDocs() {
       method: "POST",
       path: "/files/",
       description: "Upload files to the E-Z.host API",
+      icon: <FileUp className="w-5 h-5" />,
+      link: "/docs/api/upload",
       authentication: true,
       examples: {
         curl: `curl -X POST 'https://api.e-z.host/files' \\
@@ -29,6 +40,8 @@ export default function ApiDocs() {
       method: "POST",
       path: "/shortener/",
       description: "Shorten links with the E-Z.host API",
+      icon: <Link2 className="w-5 h-5" />,
+      link: "/docs/api/shortener",
       authentication: true,
       examples: {
         curl: `curl -X POST https://api.e-z.host/shortener \\
@@ -36,9 +49,9 @@ export default function ApiDocs() {
   -H "key: YOUR_API_KEY" \\
   -d '{"url": "https://example.com"}'`,
         response: `{
-  "success" true,
+  "success": true,
   "message": "URL Shortened",
-  "shortendUrl": "https://i.e-z.gg/s/xyz123",
+  "shortenedUrl": "https://i.e-z.gg/s/xyz123",
   "deletionUrl": "https://i.e-z.gg/shortener/delete?key=random-deletion-key"
 }`,
       },
@@ -47,10 +60,12 @@ export default function ApiDocs() {
       method: "POST",
       path: "/paste/",
       description: "Create pastes with the E-Z.host API",
+      icon: <Code className="w-5 h-5" />,
+      link: "/docs/api/paste",
       authentication: true,
       examples: {
         curl: `curl -X POST https://api.e-z.host/paste \\
-  -H 'key: YOUR_API_KEY ' \\
+  -H 'key: YOUR_API_KEY' \\
   -H 'Content-Type: application/json' \\
   -d '{
     "text":"contents of the paste",
@@ -59,7 +74,7 @@ export default function ApiDocs() {
     "language":"any supported language"
   }'`,
         response: `{
-  "success" true,
+  "success": true,
   "message": "Paste Created",
   "pasteUrl": "https://i.e-z.gg/p/xyz123",
   "rawUrl": "https://i.e-z.gg/p/raw/xyz123",
@@ -77,11 +92,11 @@ export default function ApiDocs() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
             API Documentation
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Learn how to utilize our API to maximise your productivity
+            Learn how to utilize our API to maximize your productivity
           </p>
         </motion.header>
 
@@ -92,10 +107,10 @@ export default function ApiDocs() {
           className="space-y-6"
         >
           <h2 className="text-2xl font-semibold flex items-center gap-2">
-            <Key className="w-6 h-6 text-purple-400" />
+            <Key className="w-6 h-6 text-purple-400 glow-icon-purple" />
             Authentication
           </h2>
-          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6">
+          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card">
             <p className="text-gray-400 mb-4">
               All API requests must include your API key in the key header:
             </p>
@@ -113,14 +128,17 @@ export default function ApiDocs() {
           className="space-y-8"
         >
           <h2 className="text-2xl font-semibold flex items-center gap-2">
-            <Terminal className="w-6 h-6 text-purple-400" />
+            <Terminal className="w-6 h-6 text-purple-400 glow-icon-purple" />
             Endpoints
           </h2>
 
           {endpoints.map((endpoint, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 space-y-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * index }}
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 space-y-6 glow-card"
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -145,7 +163,7 @@ export default function ApiDocs() {
                 <div className="flex items-center gap-2">
                   {endpoint.authentication && (
                     <div className="flex items-center gap-1 text-xs text-gray-400">
-                      <Lock className="w-4 h-4" />
+                      <Lock className="w-4 h-4 glow-icon-purple" />
                       Auth Required
                     </div>
                   )}
@@ -169,7 +187,21 @@ export default function ApiDocs() {
                   </div>
                 </div>
               </div>
-            </div>
+
+              <motion.div
+                whileHover={{ opacity: 0.5 }}
+                whileTap={{ opacity: 0.25 }}
+                className="mt-4"
+              >
+                <Link
+                  href={endpoint.link}
+                  className="inline-flex items-center px-4 py-2 rounded-md text-white transition-colors"
+                >
+                  {endpoint.icon}
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </motion.div>
+            </motion.div>
           ))}
         </motion.section>
 
@@ -177,10 +209,10 @@ export default function ApiDocs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20"
+          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 glow-card"
         >
           <div className="flex items-start gap-4">
-            <AlertCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
+            <AlertCircle className="w-6 h-6 text-purple-400 flex-shrink-0 glow-icon-purple" />
             <div>
               <h3 className="text-xl font-semibold mb-2">Need Help?</h3>
               <p className="text-gray-400">

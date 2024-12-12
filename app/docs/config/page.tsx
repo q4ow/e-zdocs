@@ -27,11 +27,13 @@ export default function GettingStarted() {
         <h2 className="text-2xl font-semibold mb-4">Quick Navigation</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <a
-            href="/docs/config"
+            href="/docs/config/sharex"
             className="block p-4 rounded-lg bg-blue-600/5 hover:bg-blue-600/10 transition-colors"
           >
-            <h3 className="font-semibold mb-2">Not Yet Implemented</h3>
-            <p className="text-sm text-gray-400">Not yet implemented</p>
+            <h3 className="font-semibold mb-2">ShareX</h3>
+            <p className="text-sm text-gray-400">
+              How to use our ShareX integrations
+            </p>
           </a>
         </div>
       </motion.div>

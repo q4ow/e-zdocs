@@ -362,6 +362,46 @@ More coming soon!`,
       },
     ],
   },
+  {
+    id: "api-key",
+    question: "Where can I find my API key?",
+    shortAnswer:
+      "You can find your API key on the dashboard. Scroll down to the 'API' section and click the 'View API Key' button.",
+    category: "Account Management",
+    sections: [
+      {
+        title: "Finding Your API Key",
+        type: "steps",
+        content: `
+          1. Log into your account
+          2. Enter the dashboard
+          3. Navigate to Account settings
+          4. Click the 'Copy API Key' button
+        `,
+      },
+      {
+        title: "API Key Example",
+        type: "code",
+        content: `
+          Keiran_05n12n9uxo6a09opfba6uxyz08hccc
+        `,
+      },
+    ],
+    images: [
+      {
+        url: "/assets/faq/api-key.png",
+        alt: "Copy API key button",
+        caption: "Where to find your API key",
+      },
+    ],
+    relatedQuestions: ["authentication"],
+    additionalNotes: [
+      "API keys are unique to each user and should never be shared",
+      "API keys are needed for all API requests",
+      "API keys can be regenerated if necessary, invalidating the old one",
+    ],
+    lastUpdated: "2024-12-12",
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {

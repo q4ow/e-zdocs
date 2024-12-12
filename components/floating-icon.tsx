@@ -22,7 +22,7 @@ export function FloatingIcon() {
 
   return (
     <motion.div
-      style={{ y, rotate }}
+      style={{ y, rotate, zIndex: 999 }}
       animate={animation.animate}
       className="fixed right-8 top-8 opacity-10 pointer-events-none"
     >
