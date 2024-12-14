@@ -143,17 +143,16 @@ export default function ShareXConfig() {
           </h3>
           <ol className="text-left text-gray-300 space-y-4 max-w-2xl mx-auto">
             <li>
-              1. Find the desired configuration file by clicking the &quot;Download
-              Config&quot; button above.
+              1. Find the desired configuration file by clicking the
+              &quot;Download Config&quot; button above.
             </li>
             <li>
-              2. Open ShareX and go to &quot;Destinations&quot; &gt; &quot;Custom
-              uploader settings&quot;.
+              2. Open ShareX and go to &quot;Destinations&quot; &gt;
+              &quot;Custom uploader settings&quot;.
             </li>
             <li>
-              3. Click on &quot;Import&quot; &gt; &quot;From file&quot; and select the
-              downloaded
-              .sxcu file.
+              3. Click on &quot;Import&quot; &gt; &quot;From file&quot; and
+              select the downloaded .sxcu file.
             </li>
             <li>
               4. Set the imported uploader as your default destination for the

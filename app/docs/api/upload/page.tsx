@@ -165,7 +165,9 @@ export default function UploadApiDocs() {
           </div>
 
           <h3 className="text-xl font-semibold">Example Request</h3>
-          <p className="text-gray-300">Here&apos;s how you can upload a file:</p>
+          <p className="text-gray-300">
+            Here&apos;s how you can upload a file:
+          </p>
           <div className="relative">
             <select
               className="block appearance-none w-full bg-gray-800 border border-gray-700 text-gray-300 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-gray-700 focus:border-gray-500"
