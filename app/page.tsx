@@ -15,7 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
-import { useRef } from "react";
+import { useRef, Suspense } from "react";
 import Typewriter from "@/components/typewriter";
 
 export default function Home() {
@@ -89,6 +89,23 @@ export default function Home() {
 
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+
+  const LoadingSpinner = () => {
+    return (
+      <motion.div 
+        className="flex justify-center items-center h-[240px]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <motion.div
+          className="w-12 h-12 border-4 border-blue-400 border-t-transparent rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+      </motion.div>
+    );
+  };
 
   return (
     <div className="min-h-screen pl-[80px] lg:pl-[256px] -ml-[80px] lg:-ml-[256px] flex justify-center">
@@ -208,12 +225,13 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             style={{ y }}
           >
-            <motion.div className="relative flex justify-center items-center h-full">
-              <motion.div
-                className="relative w-[420px] h-[240px]"
-                whileHover="expanded"
-                initial="stacked"
-              >
+             <Suspense fallback={<LoadingSpinner />}>
+              <motion.div className="relative flex justify-center items-center h-full">
+                <motion.div
+                  className="relative w-[420px] h-[240px]"
+                  whileHover="expanded"
+                  initial="stacked"
+                >
                 {showcaseImages.map((image, index) => (
                   <motion.div
                     key={index}
@@ -257,6 +275,7 @@ export default function Home() {
                 ))}
               </motion.div>
             </motion.div>
+            </Suspense>
           </motion.div>
 
           <motion.div
