@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import ezLogo from "@/public/assets/e-z.svg";
 
 const animation = {
   animate: {
@@ -22,12 +21,12 @@ export function FloatingIcon() {
 
   return (
     <motion.div
-      style={{ y, rotate, zIndex: 999 }}
+      style={{ y, rotate, zIndex: 5 }}
       animate={animation.animate}
-      className="fixed right-8 top-8 opacity-10 pointer-events-none"
+      className="fixed right-8 top-8 opacity-50 pointer-events-none"
     >
       <Image
-        src={ezLogo}
+        src="/assets/e-z.svg"
         alt="E-Z Logo"
         width={128}
         height={128}

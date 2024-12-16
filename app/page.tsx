@@ -43,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-      <LoadingAnimation />
+      {isLoading && <LoadingAnimation />}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
@@ -94,7 +94,7 @@ const Home = () => {
                       className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
                       style={{ backgroundSize: "200% 100%" }}
                     >
-                      E-Z Services
+                      E-Z Docs
                     </motion.span>
                   </motion.span>
                   <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto glow-text-blue">

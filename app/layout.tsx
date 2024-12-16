@@ -41,8 +41,8 @@ export default function RootLayout({
         >
           <div className="flex h-screen">
             <Navigation />
-            <FloatingIcon />
             <main className="flex-1 overflow-y-auto relative">
+              <FloatingIcon />
               <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] bg-zinc-950"></div>
               <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,_var(--tw-gradient-stops))] from-transparent via-blue-950/10 to-transparent animate-pulse"></div>
               <div className="fixed inset-0 -z-10 bg-gradient-to-b from-transparent via-black/10 to-black/50"></div>
