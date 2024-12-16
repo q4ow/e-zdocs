@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/api/code-block";
-import { Key, Link2, AlertCircle, Terminal, ArrowLeft } from "lucide-react";
+import { Link2, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
 export default function ShortenerApiDocs() {

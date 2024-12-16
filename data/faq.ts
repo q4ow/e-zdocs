@@ -402,6 +402,43 @@ More coming soon!`,
     ],
     lastUpdated: "2024-12-12",
   },
+  {
+    id: "uploading-cursors",
+    question: "How do I upload cursors?",
+    shortAnswer:
+      "E-Z Host supports uploading cursors in the .cur format, but .ico files work too.",
+    category: "File Uploads",
+    sections: [
+      {
+        title: "Supported Formats",
+        type: "bullets",
+        content: `
+    .cur - Recommended format for cursors
+    .ico - Also supported but not recommended`,
+      },
+      {
+        title: "Creating a Cursor File",
+        type: "text",
+        content: `
+    Converting from an image to a cursor usually doesn't work well. It's recommended to use a site like https://www.cursor.cc to properly create a .cur file from an image.`,
+      },
+      {
+        title: "Upload Steps",
+        type: "steps",
+        content: `
+    1. Visit the E-Z Host upload page
+    2. Select your .cur or .ico file
+    3. Click the 'Upload' button
+    4. Copy the provided link to share your cursor`,
+      },
+    ],
+    relatedQuestions: ["file-uploads", "supported-formats"],
+    additionalNotes: [
+      "Ensure your cursor files are properly formatted before uploading",
+      "Using .cur files provides better compatibility and performance",
+    ],
+    lastUpdated: "2024-12-16",
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {

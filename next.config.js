@@ -4,6 +4,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ["r2.e-z.host"],
   },
   webpack(config) {
     config.module.rules.push({

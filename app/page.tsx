@@ -1,80 +1,17 @@
 "use client";
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import {
-  ArrowRight,
-  Globe,
-  Zap,
-  Shield,
-  Users,
-  Code,
-  Star,
-  Heart,
-} from "lucide-react";
+import { ArrowRight, Code, Star } from "lucide-react";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, memo } from "react";
 import { LoadingAnimation } from "@/components/loading-animation";
-import dashboardImage from "@/public/assets/home/dashboard.png";
-import ezHostImage from "@/public/assets/home/e-zhost.png";
-import ezBioImage from "@/public/assets/home/e-zbio.png";
 import Link from "next/link";
 import Image from "next/image";
-import Typewriter from "@/components/typewriter";
 
-export default function Home() {
-  const features = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description:
-        "Built using the Fastify node framework, we're optimized for efficiency and minimal latency",
-    },
-    {
-      icon: Shield,
-      title: "Privacy Focused",
-      description:
-        "We pride ourselves on our privacy and security! Read our privacy policy for more info.",
-    },
-    {
-      icon: Globe,
-      title: "E-Z = Easy",
-      description:
-        "As is our brand, our services are famously simple and intuitive for our users.",
-    },
-    {
-      icon: Users,
-      title: "Growing Community",
-      description:
-        "Join thousands of users who trust E-Z Services to provide a great user experience.",
-    },
-    {
-      icon: Code,
-      title: "Developer Friendly",
-      description:
-        "Comprehensive API documentation and we offer pastes to help you store your code snippets.",
-    },
-    {
-      icon: Heart,
-      title: "Made with Love",
-      description:
-        "The team at e-z has a burning passion for creating the best user experience. We love what we do!",
-    },
-  ];
+import { features, showcaseImages, stats } from "@/data/home";
 
-  const stats = [
-    { value: "18K+", label: "Active Users" },
-    { value: "2M+", label: "Unique Views" },
-    { value: "4.6M+", label: "Uploads" },
-    { value: "24/7", label: "Support" },
-  ];
-
-  const showcaseImages = [
-    { src: dashboardImage, alt: "Dashboard Example" },
-    { src: ezHostImage, alt: "E-Z.host homepage" },
-    { src: ezBioImage, alt: "E-Z.bio homepage" },
-  ];
-
+const Home = () => {
   const statsRef = useRef(null);
   const featuresRef = useRef(null);
   const ctaRef = useRef(null);
@@ -117,9 +54,17 @@ export default function Home() {
             <div className="flex flex-col min-h-[200vh]">
               <motion.div
                 className="text-center space-y-8 pt-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.3,
+                    },
+                  },
+                  hidden: { opacity: 0 },
+                }}
               >
                 <motion.div
                   initial={{ y: 20, opacity: 0 }}
@@ -149,15 +94,7 @@ export default function Home() {
                       className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
                       style={{ backgroundSize: "200% 100%" }}
                     >
-                      <Typewriter
-                        options={{
-                          strings: ["E-Z Docs", "E-Z Host", "E-Z Bio"],
-                          autoStart: true,
-                          loop: true,
-                          delay: 50,
-                          deleteSpeed: 1,
-                        }}
-                      />
+                      E-Z Services
                     </motion.span>
                   </motion.span>
                   <p className="text-xl sm:text-2xl leading-8 text-gray-300 max-w-3xl mx-auto glow-text-blue">
@@ -179,6 +116,7 @@ export default function Home() {
                     <Link
                       href="/docs/getting-started"
                       className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 flex items-center justify-center gap-2 glow-button-blue"
+                      aria-label="Get Started"
                     >
                       Get Started
                       <ArrowRight className="w-4 h-4" />
@@ -191,6 +129,7 @@ export default function Home() {
                     <Link
                       href="/docs/api"
                       className="rounded-lg px-6 py-3 text-sm font-semibold text-blue-400 ring-1 ring-blue-400/20 flex items-center justify-center gap-2 hover:ring-blue-400/40"
+                      aria-label="API Documentation"
                     >
                       API Documentation
                       <Code className="w-4 h-4" />
@@ -270,12 +209,15 @@ export default function Home() {
                           zIndex: showcaseImages.length - index,
                         }}
                       >
-                        <Image
-                          src={image.src || "https://placehold.co/600x400"}
-                          alt={image.alt}
-                          fill
-                          className="object-cover"
-                        />
+                        {image.src ? (
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                          />
+                        ) : null}
                       </motion.div>
                     ))}
                   </motion.div>
@@ -378,6 +320,7 @@ export default function Home() {
                   <Link
                     href="/docs/getting-started"
                     className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 glow-button-blue"
+                    aria-label="Get Started"
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -390,4 +333,6 @@ export default function Home() {
       </motion.div>
     </>
   );
-}
+};
+
+export default memo(Home);

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CodeBlock } from "@/components/api/code-block";
-import { Key, FileUp, AlertCircle, Terminal, ArrowLeft } from "lucide-react";
+import { FileUp, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
