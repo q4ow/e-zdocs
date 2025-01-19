@@ -6,6 +6,7 @@ import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
 import { useRef, useState, useEffect, memo } from "react";
 import { LoadingAnimation } from "@/components/loading-animation";
+import { FloatingIcon } from "@/components/floating-icon";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -51,6 +52,7 @@ const Home = () => {
       >
         <div className="min-h-screen pl-[80px] lg:pl-[256px] -ml-[80px] lg:-ml-[256px] flex justify-center">
           <div className="max-w-6xl w-full px-4 py-12 sm:px-6 lg:px-8">
+            <FloatingIcon />
             <div className="flex flex-col min-h-[200vh]">
               <motion.div
                 className="text-center space-y-8 pt-16"
@@ -155,7 +157,7 @@ const Home = () => {
                       boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
                       transition: { duration: 0.3 },
                     }}
-                    className="relative overflow-hidden rounded-lg p-6 backdrop-blur-sm border glow-card"
+                    className="relative overflow-hidden rounded-lg p-6 backdrop-blur-sm border glow-card bg-card/10"
                   >
                     <StatCard {...stat} index={index} />
                   </motion.div>
@@ -284,7 +286,7 @@ const Home = () => {
                 initial={{ opacity: 0 }}
                 animate={ctaInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.7 }}
-                className="text-center space-y-8 rounded-2xl p-8 sm:p-12 mt-24 sm:mt-32 glow-card"
+                className="text-center space-y-8 rounded-2xl p-8 sm:p-12 mt-24 sm:mt-32 glow-card backdrop-blur-sm"
               >
                 <motion.div
                   animate={{

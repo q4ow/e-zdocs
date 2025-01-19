@@ -52,7 +52,7 @@ export const features = [
 export const stats = [
   { value: "18K+", label: "Active Users", icon: <Users /> },
   { value: "2M+", label: "Unique Views", icon: <Eye /> },
-  { value: "4.6M+", label: "Uploads", icon: <Upload /> },
+  { value: "4.8M+", label: "Uploads", icon: <Upload /> },
   { value: "24/7", label: "Support", icon: <Info /> },
 ];
 

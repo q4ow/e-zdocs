@@ -51,7 +51,12 @@ export default function FAQPage() {
         </motion.div>
 
         <div className="space-y-8">
-          <div className="flex flex-col sm:flex-row gap-4">
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="relative flex-1">
               <input
                 type="text"
@@ -87,7 +92,7 @@ export default function FAQPage() {
                 </button>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredFaqs.map((faq, index) => (

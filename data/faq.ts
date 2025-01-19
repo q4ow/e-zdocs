@@ -23,7 +23,7 @@ export const faqs: FAQ[] = [
     id: "features",
     question: "But what do I get?",
     shortAnswer:
-      "E-Z Host and E-Z Bio offer a range of features for standard users, including file hosting and customizable bio pages.",
+      "E-Z Host and E-Z Bio offer a range of features for standard users, including file hosting with unlimited storage, URL shortening with 200+ public domains and customizable bio pages.",
     category: "Services",
     sections: [
       {
@@ -68,7 +68,7 @@ Play your favourite music on your bio`,
     id: "account-creation",
     question: "How do I create an E-Z account?",
     shortAnswer:
-      "Creating an account is fairly easy, all you need is an invite code, a discord account and a valid email address.",
+      "Creating an account is fairly easy, all you need is an invite code, a discord account and a valid email address to get started. You can find the registration form on the E-Z website.",
     category: "Account Management",
     sections: [
       {
@@ -130,7 +130,7 @@ A secure password (can be reset by our support team on discord)`,
     id: "password-reset",
     question: "How do I reset my password?",
     shortAnswer:
-      "Open a ticket in our Discord server and request a password reset, ensuring you have access to the email linked to your account.",
+      "Open a ticket in our Discord server and request a password reset, ensuring you have access to the email linked to your account. Note that we cannot change your email address for you after registration.",
     category: "Account Management",
     sections: [
       {
@@ -180,9 +180,9 @@ Previous sessions will be logged out`,
   },
   {
     id: "placeholders",
-    question: "How do I make the file info show on my embeds?",
+    question: "Why doesn't file info show on my embeds?",
     shortAnswer:
-      "E-Z Host supports various dynamic placeholders that expand when your file is uploaded, such as {filename}, {size}, and {date}.",
+      "E-Z Host supports various dynamic placeholders for embeds to display file information that expand to the actual data every time the embed is loaded or the page is refreshed by the user.",
     category: "Embeds",
     sections: [
       {
@@ -232,7 +232,7 @@ Storage used: {storage}
     id: "premium-features",
     question: "What are the premium features?",
     shortAnswer:
-      "E-Z Host and E-Z Bio offer a range of enhancements for premium users for a price that seems too good to be true!",
+      "E-Z Host and E-Z Bio offer a range of enhancements for premium users for a small fee. These include extra upload limits, a cool badge on your bio, special unicode characters in URLs, and more.",
     category: "Services",
     sections: [
       {
@@ -286,7 +286,7 @@ More coming soon!`,
     id: "authentication",
     question: "How does authentication work on E-Z?",
     shortAnswer:
-      "E-Z uses a token-based authentication system with refresh tokens stored in cookies and access tokens in memory.",
+      "E-Z uses a token-based authentication system with refresh tokens stored in cookies and access tokens in memory. This system ensures secure and seamless access to our services.",
     category: "Account Management",
     sections: [
       {
@@ -335,7 +335,7 @@ More coming soon!`,
     id: "waves",
     question: "When is the next invite wave?",
     shortAnswer:
-      "Invite waves are rare and unscheduled. We will know of them no sooner than you will.",
+      "Invite waves are very rare and somewhat unscheduled. We will know of them no sooner than you will. Check the announcements channel on our Discord server to know when they happen.",
     category: "Services",
     sections: [
       {
@@ -357,7 +357,7 @@ More coming soon!`,
         type: "warning",
         content: `
       You get one invite per wave, unless you have premium
-      Do not share your invite code with others
+      Don't ask for free invites in the Discord server
       Each invite code is single-use only`,
       },
     ],
@@ -366,7 +366,7 @@ More coming soon!`,
     id: "api-key",
     question: "Where can I find my API key?",
     shortAnswer:
-      "You can find your API key on the dashboard. Scroll down to the 'API' section and click the 'View API Key' button.",
+      "You can find your API key on the dashboard. Look at the 'File settings' section and click the 'Copy API Key' button. This key is unique to you and should not be shared with anyone you don't trust.",
     category: "Account Management",
     sections: [
       {
@@ -406,7 +406,7 @@ More coming soon!`,
     id: "uploading-cursors",
     question: "How do I upload cursors?",
     shortAnswer:
-      "E-Z Host supports uploading cursors in the .cur format, but .ico files work too.",
+      "E-Z Host supports uploading cursors in the .cur format, but .ico files work too. Make sure your cursor files are properly formatted before uploading and not just converted with an online tool.",
     category: "File Uploads",
     sections: [
       {

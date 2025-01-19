@@ -20,10 +20,12 @@ export function FloatingIcon() {
   const rotate = useTransform(scrollY, [0, 1000], [0, 45]);
 
   return (
-    <motion.div
+    <motion.a
+      href="https://e-z.gg"
+      target="_blank"
       style={{ y, rotate, zIndex: 5 }}
       animate={animation.animate}
-      className="fixed right-8 top-8 opacity-50 pointer-events-none"
+      className="fixed right-8 top-8 opacity-25 hover:opacity-50 transition-opacity"
     >
       <Image
         src="/assets/e-z.svg"
@@ -32,6 +34,6 @@ export function FloatingIcon() {
         height={128}
         className="text-blue-500"
       />
-    </motion.div>
+    </motion.a>
   );
 }
