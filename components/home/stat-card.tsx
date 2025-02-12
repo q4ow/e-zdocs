@@ -16,7 +16,7 @@ export function StatCard({ value, label, index, icon }: StatCardProps) {
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.1 * (index + 6) }}
-      className="rounded-2xl p-6 text-center"
+      className="rounded-2xl p-6 text-center bg-zinc-950"
     >
       <div className="flex justify-center items-center mb-2 text-blue-400">
         {icon}

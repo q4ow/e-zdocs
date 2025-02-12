@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 
-interface FeatureCardProps {
+interface FeatureCardProps extends MotionProps {
   icon: LucideIcon;
   title: string;
   description: string;
@@ -15,13 +15,16 @@ export function FeatureCard({
   title,
   description,
   index,
+  initial,
+  animate,
+  transition,
 }: FeatureCardProps) {
   return (
     <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.1 * (index + 3) }}
-      className="relative p-6 bg-blue-950/10 rounded-2xl border border-blue-900/20 backdrop-blur-sm group hover:border-blue-500/50 transition-all duration-300"
+      initial={initial}
+      animate={animate}
+      transition={transition}
+      className="relative p-6 bg-blue-950/10 rounded-2xl border border-blue-900/20 backdrop-blur-sm group hover:border-blue-500/50 hover:scale-105 transition-all duration-300"
     >
       <div className="absolute -top-4 left-4">
         <div className="rounded-lg bg-blue-600/10 p-3 ring-1 ring-blue-600/25 group-hover:bg-blue-600/20 transition-colors">

@@ -13,7 +13,6 @@ import {
   ChevronLeft,
   ChevronDown,
   Code2,
-  Settings,
   Users,
   HelpCircle,
   BookOpen,
@@ -104,14 +103,16 @@ export function Navigation() {
                 isCollapsed && "justify-center",
               )}
             >
-              <div className="relative w-8 h-8 flex-shrink-0">
-                <Image
-                  src="/assets/e-z.svg"
-                  alt="E-Z Docs Logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
+              {!isCollapsed && (
+                <div className="relative w-8 h-8 flex-shrink-0 ml-2">
+                  <Image
+                    src="/assets/e-z.svg"
+                    alt="E-Z Docs Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              )}
               <AnimatePresence mode="wait">
                 {!isCollapsed && (
                   <motion.span
@@ -129,7 +130,10 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="icon"
-              className="h-9 w-9 hover:bg-zinc-800/50 lg:flex hidden"
+              className={cn(
+                "h-9 w-9 hover:bg-zinc-800/50 lg:flex hidden",
+                isCollapsed && "mx-auto",
+              )}
               onClick={() => setIsCollapsed(!isCollapsed)}
             >
               <ChevronLeft
@@ -143,7 +147,7 @@ export function Navigation() {
           </div>
 
           <ScrollArea className="flex-1 py-4">
-            <div className="space-y-1 px-3">
+            <div className="space-y-1 px-3 py-4">
               {!isCollapsed && (
                 <h2 className="px-3 mb-4 text-xs font-semibold text-zinc-400 uppercase tracking-wider">
                   Documentation
@@ -179,6 +183,7 @@ export function Navigation() {
                         <Icon
                           className={cn(
                             "w-5 h-5 flex-shrink-0",
+                            isCollapsed && "mx-auto",
                             isActive || isExpanded
                               ? "text-blue-400"
                               : "text-zinc-400 group-hover:text-zinc-100",
@@ -271,6 +276,7 @@ export function Navigation() {
                       <Icon
                         className={cn(
                           "w-5 h-5 flex-shrink-0",
+                          isCollapsed && "mx-auto",
                           isActive
                             ? "text-blue-400"
                             : "text-zinc-400 group-hover:text-zinc-100",
