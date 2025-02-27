@@ -85,7 +85,7 @@ A secure password (can be reset by our support team on discord)`,
         type: "steps",
         content: `
 1. Visit e-z.gg
-2. Click the "Register" button in the top right corner
+2. Click "Register" in the top right corner
 3. Enter your username
 4. Choose a secure password
 5. Enter your email address
