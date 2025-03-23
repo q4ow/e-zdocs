@@ -2,18 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  LayoutDashboard,
-  Link,
-  Settings,
-  Images,
-  Terminal,
-  Users,
-  ScrollText,
-  FileUp,
-  Link2,
-  Code,
-} from "lucide-react";
 
 import { sections, quickTips } from "@/data/dashboard";
 

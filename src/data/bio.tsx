@@ -77,6 +77,14 @@ export const featuredBios = [
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
+    username: "Keiran",
+    image:
+      "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/3cssfo64.png",
+    bioLink: "https://e-z.bio/anon",
+    socialCount: "795",
+    primaryPlatform: <Eye className="w-4 h-4" />,
+  },
+  {
     username: "not_noob",
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/es9ddfjw.png",
@@ -90,14 +98,6 @@ export const featuredBios = [
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/95mufzns.png",
     bioLink: "https://e-z.bio/dma",
     socialCount: "708",
-    primaryPlatform: <Eye className="w-4 h-4" />,
-  },
-  {
-    username: "Keiran",
-    image:
-      "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/3cssfo64.png",
-    bioLink: "https://e-z.bio/anon",
-    socialCount: "624",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {

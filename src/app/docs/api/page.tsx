@@ -34,7 +34,7 @@ export default function ApiDocs() {
             <Key className="w-6 h-6 text-purple-400 glow-icon-purple" />
             Authentication
           </h2>
-          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card">
+          <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6">
             <p className="text-gray-400 mb-4">
               All API requests must include your API key in the key header:
             </p>
@@ -62,7 +62,7 @@ export default function ApiDocs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 space-y-6 glow-card"
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 space-y-6 "
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -133,7 +133,7 @@ export default function ApiDocs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 glow-card"
+          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
         >
           <div className="flex items-start gap-4">
             <AlertCircle className="w-6 h-6 text-purple-400 flex-shrink-0 glow-icon-purple" />

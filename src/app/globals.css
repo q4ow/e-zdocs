@@ -114,12 +114,6 @@
   filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
 }
 
-.glow-card {
-  box-shadow:
-    0 0 10px rgba(59, 130, 246, 0.5),
-    0 0 20px rgba(59, 130, 246, 0.3);
-}
-
 @keyframes float {
   0%,
   100% {

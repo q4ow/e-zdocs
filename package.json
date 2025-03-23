@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "check": "tsc --noEmit",
-    "format": "prettier --write .",
+    "format": "prettier --write src",
     "lint:fix": "next lint --fix",
     "clean:win": "if exist .next rmdir /s /q .next && if exist out rmdir /s /q out",
     "clean": "rm -rf .next out",
@@ -40,5 +40,10 @@
     "@svgr/webpack": "^8.1.0",
     "@types/node": "22.10.7",
     "autoprefixer": "^10.4.20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
   }
 }

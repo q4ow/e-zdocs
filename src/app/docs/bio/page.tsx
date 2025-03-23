@@ -45,7 +45,7 @@ export default function BioDocs() {
                   borderColor: "rgba(168, 85, 247, 0.5)",
                 }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative block overflow-hidden rounded-xl bg-gray-900/50 border border-gray-800 glow-card"
+                className="group relative block overflow-hidden rounded-xl bg-gray-900/50 border border-gray-800 "
               >
                 <div className="aspect-square overflow-hidden">
                   <motion.img
@@ -97,7 +97,7 @@ export default function BioDocs() {
                 scale: 1.02,
               }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 glow-card"
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 "
             >
               <div className="flex items-center gap-4">
                 <div className="bg-purple-500/10 p-3 rounded-lg">
@@ -129,7 +129,7 @@ export default function BioDocs() {
                 scale: 1.02,
               }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card"
+              className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 "
             >
               <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                 {option.icon}
@@ -143,7 +143,7 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 glow-card"
+          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
         >
           <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
             Premium Features
@@ -163,7 +163,7 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 glow-card"
+          className="bg-gray-900/50 border border-gray-800 rounded-xl p-8 "
         >
           <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
             API Access
@@ -208,7 +208,7 @@ export default function BioDocs() {
                 transition={{ duration: 0.2 }}
                 className="h-full"
               >
-                <div className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6 glow-card">
+                <div className="flex flex-col h-full bg-gray-900/50 border border-gray-800 rounded-xl p-6 ">
                   <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
                     {channel.icon}
                   </div>
@@ -227,7 +227,7 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-8 glow-card"
+          className="bg-purple-500/5 border border-purple-500/20 rounded-xl p-8 "
         >
           <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
             Best Practices
