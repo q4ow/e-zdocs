@@ -3,7 +3,7 @@ import type { Metadata } from "next/types";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
-import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,11 +46,14 @@ export default function RootLayout({
               <div className="fixed inset-0 -z-10 bg-linear-to-b from-transparent via-black/10 to-black/50"></div>
               <div className="fixed inset-0 -z-10 bg-[url('/grid.svg')] bg-center opacity-10 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
               {children}
-              <Analytics />
             </main>
           </div>
         </ThemeProvider>
       </body>
+      <Script
+        src="https://scripts.simpleanalyticscdn.com/latest.js"
+        data-collect-dnt="true"
+      />
     </html>
   );
 }
