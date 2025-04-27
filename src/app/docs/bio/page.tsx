@@ -24,7 +24,7 @@ export default function BioDocs() {
           className="space-y-6"
         >
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
+            <h2 className="text-3xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
               Featured Bios
             </h2>
             <p className="text-gray-400">
@@ -58,7 +58,7 @@ export default function BioDocs() {
                     transition={{ duration: 0.3 }}
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent">
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <div className="flex items-center justify-between">
                       <div>
@@ -70,7 +70,7 @@ export default function BioDocs() {
                           <span className="text-sm">{bio.socialCount}</span>
                         </div>
                       </div>
-                      <div className="bg-purple-500/20 p-2 rounded-lg backdrop-blur-sm">
+                      <div className="bg-purple-500/20 p-2 rounded-lg backdrop-blur-xs">
                         <ExternalLink className="w-4 h-4 text-purple-400" />
                       </div>
                     </div>
@@ -143,7 +143,7 @@ export default function BioDocs() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
+          className="bg-linear-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
         >
           <h2 className="text-2xl font-semibold mb-6 glow-text-purple">
             Premium Features
@@ -215,9 +215,7 @@ export default function BioDocs() {
                   <h3 className="text-xl font-semibold mb-2">
                     {channel.title}
                   </h3>
-                  <p className="text-gray-400 flex-grow">
-                    {channel.description}
-                  </p>
+                  <p className="text-gray-400 grow">{channel.description}</p>
                 </div>
               </motion.div>
             </Link>
@@ -235,7 +233,7 @@ export default function BioDocs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bestPractices.map((practice, index) => (
               <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 glow-icon-purple" />
+                <CheckCircle className="w-5 h-5 text-purple-400 shrink-0 glow-icon-purple" />
                 <span className="text-gray-300">{practice}</span>
               </div>
             ))}

@@ -88,7 +88,7 @@ export function Navigation() {
 
       <nav
         className={cn(
-          "fixed lg:relative flex flex-col h-screen bg-zinc-950/95 backdrop-blur-sm border-r border-zinc-500/20 transition-all duration-300 ease-in-out z-40",
+          "fixed lg:relative flex flex-col h-screen bg-zinc-950/95 backdrop-blur-xs border-r border-zinc-500/20 transition-all duration-300 ease-in-out z-40",
           isCollapsed ? "w-20" : "w-64",
           "lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full",
@@ -104,7 +104,7 @@ export function Navigation() {
               )}
             >
               {!isCollapsed && (
-                <div className="relative w-8 h-8 flex-shrink-0 ml-2">
+                <div className="relative w-8 h-8 shrink-0 ml-2">
                   <Image
                     src="/assets/e-z.svg"
                     alt="E-Z Docs Logo"
@@ -182,7 +182,7 @@ export function Navigation() {
                       >
                         <Icon
                           className={cn(
-                            "w-5 h-5 flex-shrink-0",
+                            "w-5 h-5 shrink-0",
                             isCollapsed && "mx-auto",
                             isActive || isExpanded
                               ? "text-blue-400"
@@ -275,7 +275,7 @@ export function Navigation() {
                     >
                       <Icon
                         className={cn(
-                          "w-5 h-5 flex-shrink-0",
+                          "w-5 h-5 shrink-0",
                           isCollapsed && "mx-auto",
                           isActive
                             ? "text-blue-400"
@@ -313,7 +313,7 @@ export function Navigation() {
                 isCollapsed && "justify-center px-2",
               )}
             >
-              <ExternalLink className="w-5 h-5 flex-shrink-0" />
+              <ExternalLink className="w-5 h-5 shrink-0" />
               {!isCollapsed && <span>Visit E-Z.gg</span>}
             </a>
           </div>

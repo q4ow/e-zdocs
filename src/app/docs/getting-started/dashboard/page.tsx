@@ -14,7 +14,7 @@ export default function DashboardGuide() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-6"
         >
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             Dashboard Guide
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -83,7 +83,7 @@ export default function DashboardGuide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-8 border border-indigo-500/20"
+          className="bg-linear-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-8 border border-indigo-500/20"
         >
           <h3 className="text-2xl font-semibold mb-8">
             Quick Tips & Shortcuts
@@ -110,7 +110,7 @@ export default function DashboardGuide() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-8 border border-indigo-500/20 text-center"
+          className="bg-linear-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-8 border border-indigo-500/20 text-center"
         >
           <h3 className="text-2xl font-semibold mb-4">Need More Help?</h3>
           <p className="text-gray-400 max-w-2xl mx-auto">

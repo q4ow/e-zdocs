@@ -21,7 +21,7 @@ export default function RegistrationGuide() {
             animate={{ opacity: 1 }}
             className="text-center space-y-6"
           >
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               Registration
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">

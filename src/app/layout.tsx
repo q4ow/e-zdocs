@@ -42,7 +42,7 @@ export default function RootLayout({
             <Navigation />
             <main className="flex-1 overflow-y-auto relative">
               <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] bg-zinc-950"></div>
-              <div className="fixed inset-0 -z-10 bg-gradient-to-b from-transparent via-black/10 to-black/50"></div>
+              <div className="fixed inset-0 -z-10 bg-linear-to-b from-transparent via-black/10 to-black/50"></div>
               <div className="fixed inset-0 -z-10 bg-[url('/grid.svg')] bg-center opacity-10 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
               {children}
             </main>

@@ -14,7 +14,7 @@ export default function ShareXConfig() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-6"
         >
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             ShareX Configuration
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -86,7 +86,7 @@ export default function ShareXConfig() {
                   />
                 </motion.div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-900/50 pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-r from-transparent to-gray-900/50 pointer-events-none" />
             </motion.section>
           ))}
         </motion.div>
@@ -95,7 +95,7 @@ export default function ShareXConfig() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-8 border border-blue-500/20 text-center"
+          className="bg-linear-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-8 border border-blue-500/20 text-center"
         >
           <h3 className="text-2xl font-semibold mb-4">
             How to Use ShareX Configs

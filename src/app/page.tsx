@@ -76,7 +76,7 @@ const Home = () => {
                       repeat: Infinity,
                       repeatType: "reverse",
                     }}
-                    className="text-transparent font-medium bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
+                    className="text-transparent font-medium bg-clip-text bg-linear-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
                     style={{ backgroundSize: "200% 100%" }}
                   >
                     E-Z Docs
@@ -100,7 +100,7 @@ const Home = () => {
                 >
                   <Link
                     href="/docs/getting-started"
-                    className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 flex items-center justify-center gap-2 glow-button-blue"
+                    className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-xs bg-blue-600 flex items-center justify-center gap-2 glow-button-blue"
                     aria-label="Get Started"
                   >
                     Get Started
@@ -140,7 +140,7 @@ const Home = () => {
                     boxShadow: "0 0 30px rgba(59, 130, 246, 0.5)",
                     transition: { duration: 0.3 },
                   }}
-                  className="relative overflow-hidden rounded-2xl p-6 backdrop-blur-sm w-full border  bg-zinc-950"
+                  className="relative overflow-hidden rounded-2xl p-6 backdrop-blur-xs w-full border  bg-zinc-950"
                 >
                   <StatCard {...stat} index={index} />
                 </motion.div>
@@ -232,7 +232,7 @@ const Home = () => {
                     repeat: Infinity,
                     repeatType: "reverse",
                   }}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue"
+                  className="text-transparent bg-clip-text bg-linear-to-r from-blue-500 via-blue-400 to-blue-300 glow-text-blue"
                   style={{ backgroundSize: "200% 100%" }}
                 >
                   But why choose us?
@@ -255,7 +255,7 @@ const Home = () => {
               initial={{ opacity: 0 }}
               animate={ctaInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.7 }}
-              className="text-center space-y-8 rounded-2xl p-8 sm:p-12 mt-24 sm:mt-32  backdrop-blur-sm"
+              className="text-center space-y-8 rounded-2xl p-8 sm:p-12 mt-24 sm:mt-32  backdrop-blur-xs"
             >
               <motion.div
                 animate={{
@@ -289,7 +289,7 @@ const Home = () => {
               >
                 <Link
                   href="/docs/getting-started"
-                  className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-sm bg-blue-600 glow-button-blue"
+                  className="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-xs bg-blue-600 glow-button-blue"
                   aria-label="Get Started"
                 >
                   Get Started

@@ -24,7 +24,7 @@ export function FAQCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="h-48 w-200"
+      className="min-h-[12rem] w-full"
     >
       <Link href={`/faq/${id}`}>
         <div className="group relative overflow-hidden rounded-lg border border-zinc-500/20 bg-zinc-950/50 p-6 hover:bg-zinc-950/80 transition-colors h-full">

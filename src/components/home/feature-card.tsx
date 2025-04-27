@@ -24,7 +24,7 @@ export function FeatureCard({
       initial={initial}
       animate={animate}
       transition={transition}
-      className="relative p-6 bg-blue-950/10 rounded-2xl border border-blue-900/20 backdrop-blur-sm group hover:border-blue-500/50 hover:scale-105 transition-all duration-300"
+      className="relative p-6 bg-blue-950/10 rounded-2xl border border-blue-900/20 backdrop-blur-xs group hover:border-blue-500/50 hover:scale-105 transition-all duration-300"
     >
       <div className="absolute -top-4 left-4">
         <div className="rounded-lg bg-blue-600/10 p-3 ring-1 ring-blue-600/25 group-hover:bg-blue-600/20 transition-colors">

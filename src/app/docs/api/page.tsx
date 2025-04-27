@@ -16,7 +16,7 @@ export default function ApiDocs() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
+          <h1 className="text-5xl font-bold bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent glow-text-purple">
             API Documentation
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -133,10 +133,10 @@ export default function ApiDocs() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
+          className="bg-linear-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-8 border border-purple-500/20 "
         >
           <div className="flex items-start gap-4">
-            <AlertCircle className="w-6 h-6 text-purple-400 flex-shrink-0 glow-icon-purple" />
+            <AlertCircle className="w-6 h-6 text-purple-400 shrink-0 glow-icon-purple" />
             <div>
               <h3 className="text-xl font-semibold mb-2">Need Help?</h3>
               <p className="text-gray-400">

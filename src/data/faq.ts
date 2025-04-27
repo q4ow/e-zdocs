@@ -180,7 +180,7 @@ Previous sessions will be logged out`,
   },
   {
     id: "placeholders",
-    question: "Why doesn't file info show on my embeds?",
+    question: "What embed placeholders can I use?",
     shortAnswer:
       "E-Z Host supports various dynamic placeholders for embeds to display file information that expand to the actual data every time the embed is loaded or the page is refreshed by the user.",
     category: "Embeds",
@@ -230,7 +230,7 @@ Storage used: {storage}
 
   {
     id: "premium-features",
-    question: "What are the premium features?",
+    question: "What do I get with premium?",
     shortAnswer:
       "E-Z Host and E-Z Bio offer a range of enhancements for premium users for a small fee. These include extra upload limits, a cool badge on your bio, special unicode characters in URLs, and more.",
     category: "Services",
@@ -438,6 +438,151 @@ More coming soon!`,
       "Using .cur files provides better compatibility and performance",
     ],
     lastUpdated: "2024-12-16",
+  },
+  {
+    id: "what-is-ezhost",
+    question: "What is E-Z Host?",
+    shortAnswer:
+      "E-Z Host is a service that utilizes upload tools like ShareX to capture screenshots and video clips to instantly get a shareable link.",
+    category: "Services",
+    sections: [
+      {
+        title: "Overview",
+        type: "text",
+        content:
+          "E-Z Host is designed to make sharing screenshots, video clips, and other files as quick and seamless as possible. It integrates with popular tools like ShareX to provide instant shareable links for your content.",
+      },
+      {
+        title: "File Limits",
+        type: "text",
+        content:
+          "Standard users can upload files up to 25MB, while premium users get 100MB per file. While there's no strict overall storage limit, users are expected to use the service reasonably and not as a drive storage solution.",
+      },
+    ],
+    relatedQuestions: ["features", "premium-features", "setup-instructions"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "setup-instructions",
+    question: "How do I setup E-Z Host?",
+    shortAnswer:
+      "Setup instructions are available on the dashboard's settings page, with detailed tutorials for each supported platform.",
+    category: "Getting Started",
+    sections: [
+      {
+        title: "Platform Support",
+        type: "bullets",
+        content: `
+Windows
+MacOS
+Linux
+iOS
+Android`,
+      },
+      {
+        title: "Setup Process",
+        type: "steps",
+        content: `
+1. Log into your E-Z Host account
+2. Navigate to the dashboard settings
+3. Select your platform
+4. Follow the platform-specific setup guide`,
+      },
+    ],
+    relatedQuestions: ["what-is-ezhost", "features"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "what-is-ezbio",
+    question: "What is E-Z Bio?",
+    shortAnswer:
+      "E-Z Bio is a biolink service that allows you to consolidate all your social media and other links in one customizable page.",
+    category: "Services",
+    sections: [
+      {
+        title: "Key Features",
+        type: "bullets",
+        content: `
+Customizable bio page
+All social media links in one place
+Easy to share single link
+Professional presentation`,
+      },
+    ],
+    relatedQuestions: ["features", "premium-features"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "getting-access",
+    question: "How do I get access?",
+    shortAnswer:
+      "Access to both E-Z Host and E-Z Bio is available for $3 through our store at store.e-z.gg",
+    category: "Account Management",
+    sections: [
+      {
+        title: "Purchase Steps",
+        type: "steps",
+        content: `
+1. Visit store.e-z.gg
+2. Select the basic access package
+3. Complete the payment process
+4. Get instant access to both services`,
+      },
+    ],
+    relatedQuestions: ["premium-features", "account-creation"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "storage-limits",
+    question: "What are the upload and storage limits?",
+    shortAnswer:
+      "Standard users have a 25MB per-file limit, while premium users get 100MB per file. There's no strict total storage limit, but reasonable usage is expected.",
+    category: "Services",
+    sections: [
+      {
+        title: "File Limits",
+        type: "text",
+        content: "Standard users: 25MB per file\nPremium users: 100MB per file",
+      },
+      {
+        title: "Storage Policy",
+        type: "warning",
+        content: `
+- No strict overall storage limit
+- Expected to be used within reason
+- Not intended for drive storage
+- Designed for quick file sharing, screenshots, and clips`,
+      },
+    ],
+    relatedQuestions: ["premium-features", "what-is-ezhost"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "platform-support",
+    question: "What platforms do you support?",
+    shortAnswer:
+      "E-Z Host supports all major platforms including Windows, MacOS, Linux, iOS, and Android.",
+    category: "Services",
+    sections: [
+      {
+        title: "Supported Platforms",
+        type: "bullets",
+        content: `
+Windows
+MacOS
+Linux
+iOS
+Android`,
+      },
+      {
+        title: "Setup Information",
+        type: "note",
+        content:
+          "Each platform has its own dedicated setup guide available in the dashboard settings.",
+      },
+    ],
+    relatedQuestions: ["setup-instructions", "what-is-ezhost"],
+    lastUpdated: "2025-04-27",
   },
 ];
 
