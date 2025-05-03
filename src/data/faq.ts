@@ -630,17 +630,17 @@ C# SDK - Coming soon`,
         title: "JavaScript SDK Installation",
         type: "code",
         content: `
-pnpm add @q4ow/e-zsdk # Recommended
+pnpm add e-zhost-js # Recommended
 
-npm install @q4ow/e-zsdk
+npm install e-zhost-js
 
-yarn add @q4ow/e-zsdk`,
+yarn add e-zhost-js`,
       },
       {
         title: "Basic Usage Example",
         type: "code",
         content: `
-import { EZClient } from '@q4ow/e-zsdk';
+import { EZClient } from 'e-zhost-js';
 
 const client = new EZClient('YOUR_API_KEY');
 
