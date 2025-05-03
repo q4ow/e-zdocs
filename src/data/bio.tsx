@@ -38,8 +38,9 @@ export const featuredBios = [
   },
   {
     username: "Rage",
-    image: "https://hentai.expert/vhtjb8ry.png",
-    biolink: "https://e-z.bio/0",
+    image:
+      "https://hentai.expert/vhtjb8ry.png",
+    bioLink: "https://e-z.bio/0",
     socialCount: "4264",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
