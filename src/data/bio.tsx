@@ -33,15 +33,14 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/oxzn20ru.png",
     bioLink: "https://e-z.bio/aiden",
-    socialCount: "23236",
+    socialCount: "24311",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
-    username: "Nado",
-    image:
-      "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/c9qhakma.png",
-    bioLink: "https://e-z.bio/vx",
-    socialCount: "2195",
+    username: "Rage",
+    image: "https://hentai.expert/vhtjb8ry.png",
+    biolink: "https://e-z.bio/0",
+    socialCount: "4264",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -49,7 +48,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/t1zkap63.png",
     bioLink: "https://e-z.bio/az",
-    socialCount: "2195",
+    socialCount: "2550",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -57,7 +56,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/jd4fkwjs.png",
     bioLink: "https://e-z.bio/eva",
-    socialCount: "1885",
+    socialCount: "2222",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -65,7 +64,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/jld517td.png",
     bioLink: "https://e-z.bio/ky",
-    socialCount: "1283",
+    socialCount: "1614",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -73,23 +72,23 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/imk3oqi3.png",
     bioLink: "https://e-z.bio/loud",
-    socialCount: "1146",
+    socialCount: "1443",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
     username: "Keiran",
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/3cssfo64.png",
-    bioLink: "https://e-z.bio/anon",
-    socialCount: "795",
+    bioLink: "https://e-z.bio/tty",
+    socialCount: "946",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
-    username: "not_noob",
+    username: "Robin",
     image:
-      "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/es9ddfjw.png",
-    bioLink: "https://e-z.bio/ffs",
-    socialCount: "782",
+      "https://hentai.expert/s5lglelq.png",
+    bioLink: "https://e-z.bio/robintt",
+    socialCount: "198",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -97,7 +96,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/95mufzns.png",
     bioLink: "https://e-z.bio/dma",
-    socialCount: "708",
+    socialCount: "1003",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -105,7 +104,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/3zh7wdcw.png",
     bioLink: "https://e-z.bio/glaive",
-    socialCount: "530",
+    socialCount: "595",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -113,7 +112,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/6xz6kcto.png",
     bioLink: "https://e-z.bio/qq",
-    socialCount: "182",
+    socialCount: "233",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
@@ -121,7 +120,7 @@ export const featuredBios = [
     image:
       "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/zt88b00o.png",
     bioLink: "https://e-z.bio/entity",
-    socialCount: "74",
+    socialCount: "266",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
 ];
