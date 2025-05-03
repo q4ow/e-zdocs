@@ -78,9 +78,9 @@ export const featuredBios = [
   {
     username: "Keiran",
     image:
-      "https://r2.e-z.host/ca19848c-de8c-4cae-9a10-858d6fd864b7/3cssfo64.png",
+      "https://hentai.expert/kixqpi7l.png",
     bioLink: "https://e-z.bio/tty",
-    socialCount: "946",
+    socialCount: "947",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
