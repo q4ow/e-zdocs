@@ -584,6 +584,90 @@ Android`,
     relatedQuestions: ["setup-instructions", "what-is-ezhost"],
     lastUpdated: "2025-04-27",
   },
+  {
+    id: "platform-support",
+    question: "What platforms do you support?",
+    shortAnswer:
+      "E-Z Host supports all major platforms including Windows, MacOS, Linux, iOS, and Android.",
+    category: "Services",
+    sections: [
+      {
+        title: "Supported Platforms",
+        type: "bullets",
+        content: `
+Windows
+MacOS
+Linux
+iOS
+Android`,
+      },
+      {
+        title: "Setup Information",
+        type: "note",
+        content:
+          "Each platform has its own dedicated setup guide available in the dashboard settings.",
+      },
+    ],
+    relatedQuestions: ["setup-instructions", "what-is-ezhost"],
+    lastUpdated: "2025-04-27",
+  },
+  {
+    id: "official-sdks",
+    question: "Are there official SDKs for the API?",
+    shortAnswer:
+      "Yes, E-Z Host provides official SDKs for JavaScript, with Rust and C# versions coming soon. These SDKs make it easier to interact with our API using your preferred programming language.",
+    category: "Development",
+    sections: [
+      {
+        title: "Available SDKs",
+        type: "bullets",
+        content: `
+JavaScript/TypeScript SDK - Available now via npm/pnpm/yarn
+Rust SDK - Coming soon
+C# SDK - Coming soon`,
+      },
+      {
+        title: "JavaScript SDK Installation",
+        type: "code",
+        content: `
+pnpm add @q4ow/e-zsdk # Recommended
+
+npm install @q4ow/e-zsdk
+
+yarn add @q4ow/e-zsdk`,
+      },
+      {
+        title: "Basic Usage Example",
+        type: "code",
+        content: `
+import { EZClient } from '@q4ow/e-zsdk';
+
+const client = new EZClient('YOUR_API_KEY');
+
+async function uploadFile(filePath) {
+  try {
+    const result = await client.upload(filePath);
+    console.log('File uploaded successfully:', result.url);
+  } catch (error) {
+    console.error('Upload failed:', error);
+  }
+}`,
+      },
+      {
+        title: "SDK Benefits",
+        type: "text",
+        content: `
+The official SDKs provide a more convenient way to interact with the E-Z Host API compared to making raw HTTP requests. They handle authentication, request formatting, error handling, and provide a more intuitive interface for developers.`,
+      },
+    ],
+    relatedQuestions: ["api-key", "authentication"],
+    additionalNotes: [
+      "The JavaScript SDK is TypeScript-friendly with full type definitions",
+      "Additional language support may be added in the future",
+      "API documentation is available too for those who prefer to use the REST API directly"
+    ],
+    lastUpdated: "2025-05-03",
+  },
 ];
 
 export function getFAQ(id: string): FAQ | undefined {
