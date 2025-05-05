@@ -615,16 +615,17 @@ Android`,
     id: "official-sdks",
     question: "Are there official SDKs for the API?",
     shortAnswer:
-      "Yes, E-Z Host provides official SDKs for JavaScript, with Rust and C# versions coming soon. These SDKs make it easier to interact with our API using your preferred programming language.",
+      "Yes, E-Z Host provides official SDKs for JavaScript, .NET, and Python, with Rust coming soon. These SDKs make it easier to interact with our API using your preferred programming language.",
     category: "Development",
     sections: [
       {
         title: "Available SDKs",
         type: "bullets",
         content: `
-JavaScript/TypeScript SDK - Available now via npm/pnpm/yarn
-Rust SDK - Coming soon
-C# SDK - Coming soon`,
+JavaScript/TypeScript SDK - Available now via npm
+.NET SDK - Available now via NuGet
+Python SDK - Available now via GitHub
+Rust SDK - Coming soon`,
       },
       {
         title: "JavaScript SDK Installation",
@@ -635,6 +636,46 @@ pnpm add e-zhost-js # Recommended
 npm install e-zhost-js
 
 yarn add e-zhost-js`,
+      },
+      {
+        title: ".NET SDK Installation",
+        type: "code",
+        content: `
+dotnet add package EZDotNet.Core
+dotnet add package EZDotNet.Services`,
+      },
+      {
+        title: "Python SDK Installation",
+        type: "code",
+        content: `
+# Clone from GitHub repository
+git clone https://github.com/e-z-services/e-z-py
+# No installation needed - import directly from the cloned repository`,
+      },
+      {
+        title: "Python SDK Usage Example",
+        type: "code",
+        content: `
+from ez_api import EZ_API
+
+api = EZ_API("YOUR_API_KEY")
+
+# Upload a file
+upload = api.upload("path/to/file.png")
+print("Uploaded Image:", upload.image_url)
+
+# Shorten a URL
+shorten = api.shorten_url("https://example.com")
+print("Shortened URL:", shorten.short_url)
+
+# Create a paste
+paste = api.paste(
+    title="Example Paste",
+    description="A simple example",
+    content="print('Hello, World!')",
+    language="python"
+)
+print("Paste URL:", paste.paste_url)`,
       },
       {
         title: "Basic Usage Example",
@@ -662,11 +703,11 @@ The official SDKs provide a more convenient way to interact with the E-Z Host AP
     ],
     relatedQuestions: ["api-key", "authentication"],
     additionalNotes: [
-      "The JavaScript SDK is TypeScript-friendly with full type definitions",
-      "Additional language support may be added in the future",
+      "The Python SDK is currently only available via GitHub, not PyPI",
+      ".NET SDK supports both .NET Core and .NET Framework applications",
       "API documentation is available too for those who prefer to use the REST API directly"
     ],
-    lastUpdated: "2025-05-03",
+    lastUpdated: "2025-05-05",
   },
 ];
 
