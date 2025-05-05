@@ -63,22 +63,57 @@ export async function generateMetadata({
   };
 }
 
+function parseMarkdownLinks(text: string) {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  
+  const parts = text.split(linkRegex);
+  const result = [];
+  
+  for (let i = 0; i < parts.length; i++) {
+    if (i % 3 === 0) {
+      result.push(<span key={`text-${i}`}>{parts[i]}</span>);
+    } else if (i % 3 === 1) {
+      const linkText = parts[i];
+      const linkUrl = parts[i + 1];
+      
+      result.push(
+        <a
+          key={`link-${i}`}
+          href={linkUrl}
+          className="text-blue-400 hover:text-blue-300 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {linkText}
+        </a>
+      );
+      i++;
+    }
+  }
+  
+  return result;
+}
+
 function SectionContent({ content, type }: { content: string; type?: string }) {
   const formattedContent = content.trim();
 
   if (type === "bullets" || type === "steps") {
     return (
       <div className="space-y-2">
-        {formattedContent.split("\n").map((item, index) => (
-          <div key={index} className="flex items-start gap-2">
-            <span className="text-blue-400">
-              {type === "bullets" ? "•" : `${index + 1}.`}
-            </span>
-            <span className="text-zinc-300">
-              {item.replace(/^[-\d]+\.\s*/, "")}
-            </span>
-          </div>
-        ))}
+        {formattedContent.split("\n").map((item, index) => {
+          const cleanedItem = item.replace(/^[-\d]+\.\s*/, "").trim();
+          
+          return (
+            <div key={index} className="flex items-start gap-2">
+              <span className="text-blue-400">
+                {type === "bullets" ? "•" : `${index + 1}.`}
+              </span>
+              <span className="text-zinc-300">
+                {parseMarkdownLinks(cleanedItem)}
+              </span>
+            </div>
+          );
+        })}
       </div>
     );
   }
@@ -119,7 +154,9 @@ function SectionContent({ content, type }: { content: string; type?: string }) {
   }
 
   return (
-    <div className="text-zinc-300 whitespace-pre-wrap">{formattedContent}</div>
+    <div className="text-zinc-300 whitespace-pre-wrap">
+      {parseMarkdownLinks(formattedContent)}
+    </div>
   );
 }
 
