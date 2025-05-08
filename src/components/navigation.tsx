@@ -7,7 +7,7 @@ import Image from "next/image";
 import { usePathname } from "next/dist/client/components/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaCode } from "react-icons/fa";
 import {
   Menu,
   ChevronLeft,
@@ -58,6 +58,11 @@ const quickLinks = [
     name: "FAQ",
     href: "/faq",
     icon: HelpCircle,
+  },
+  {
+    name: "SDKs",
+    href: "/docs/sdk",
+    icon: FaCode,
   },
   {
     name: "Discord",
