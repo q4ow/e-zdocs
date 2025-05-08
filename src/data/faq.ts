@@ -20,34 +20,20 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-
-
     id: "features",
-
 
     question: "But what do I get?",
 
-
     shortAnswer:
-
-
       "E-Z Host and E-Z Bio offer a range of features for standard users, including file hosting with unlimited storage, URL shortening with 200+ public domains and customizable bio pages.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "E-Z Host Features",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -68,19 +54,12 @@ RESTful API for uploads, pastes and link shortening
 
 
 & Much, much more`,
-
-
       },
 
-
       {
-
-
         title: "E-Z Bio Features",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -98,91 +77,47 @@ Mobile-friendly design
 
 
 Play your favourite music on your bio`,
-
-
       },
-
-
     ],
 
-
     images: [
-
-
       {
-
-
         url: "/assets/faq/bio-example.png",
-
 
         alt: "Example bio page",
 
-
         caption: "My personal bio page - e-z.bio/keiran",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["premium-features", "account-creation"],
 
-
     additionalNotes: [
-
-
       "Features may be subject to change",
-
 
       "Some features might have usage restrictions for standard users",
 
-
       "A premium upgrade is available for purchase",
-
-
     ],
 
-
     lastUpdated: "2024-12-01",
-
-
   },
 
-
-
-
-
   {
-
-
     id: "account-creation",
-
 
     question: "How do I create an E-Z account?",
 
-
     shortAnswer:
-
-
       "Creating an account is fairly easy, all you need is an invite code, a discord account and a valid email address to get started. You can find the registration form on the E-Z website.",
-
 
     category: "Account Management",
 
-
     sections: [
-
-
       {
-
-
         title: "Requirements",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -197,19 +132,12 @@ A valid email address
 
 
 A secure password (can be reset by our support team on discord)`,
-
-
       },
 
-
       {
-
-
         title: "Registration Steps",
 
-
         type: "steps",
-
 
         content: `
 
@@ -239,37 +167,21 @@ A secure password (can be reset by our support team on discord)`,
 
 
 `,
-
-
       },
 
-
       {
-
-
         title: "After Registration",
-
 
         type: "text",
 
-
         content:
-
-
           "Once completed, you'll have full access to all E-Z services and features. Make sure to join our Discord server to stay updated with the latest news and updates.",
-
-
       },
 
-
       {
-
-
         title: "Important Security Notes",
 
-
         type: "warning",
-
 
         content: `
 
@@ -284,91 +196,49 @@ A secure password (can be reset by our support team on discord)`,
 
 
 - Keep your invite code private until registered`,
-
-
       },
-
-
     ],
 
-
     images: [
-
-
       {
-
-
         url: "/assets/faq/signup-page.png",
-
 
         alt: "E-Z signup page",
 
-
         caption: "The E-Z signup page with registration form",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["password-reset", "account-verification"],
 
-
     additionalNotes: [
-
-
       "Account creation is subject to our Terms of Service",
-
 
       "Multiple accounts per user are now allowed",
 
-
       "Ensure you read our rules (in the discord) and our TOS carefully before registering",
 
-
       "Invite codes are single use and should be used responsibly",
-
-
     ],
 
-
     lastUpdated: "2024-12-01",
-
-
   },
 
-
   {
-
-
     id: "password-reset",
-
 
     question: "How do I reset my password?",
 
-
     shortAnswer:
-
-
       "Open a ticket in our Discord server and request a password reset, ensuring you have access to the email linked to your account. Note that we cannot change your email address for you after registration.",
-
 
     category: "Account Management",
 
-
     sections: [
-
-
       {
-
-
         title: "Reset Process",
 
-
         type: "steps",
-
 
         content: `
 
@@ -392,19 +262,12 @@ A secure password (can be reset by our support team on discord)`,
 
 
         `,
-
-
       },
 
-
       {
-
-
         title: "Important Information",
 
-
         type: "warning",
-
 
         content: `
 
@@ -416,115 +279,65 @@ Make sure to use a strong, unique password
 
 
 Previous sessions will be logged out`,
-
-
       },
-
 
       //       {
 
-
       //         title: "Password Requirements",
-
 
       //         type: "bullets",
 
-
       //         content: `
-
 
       // - Minimum 5 characters
 
-
       // `
 
-
       //       }
-
-
     ],
 
-
     images: [
-
-
       {
-
-
         url: "/assets/faq/support-ticket.png",
-
 
         alt: "Support ticket form",
 
-
         caption: "The support ticket form",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["account-creation", "account-security"],
 
-
     additionalNotes: [
-
-
       "You absolutely need a valid email address to reset your password",
-
 
       "The only way to reset your password is through a support ticket",
 
-
       "Consider enabling 2FA after resetting your password",
-
 
       "Please don't spam the chat in our Discord while waiting for a staff response",
 
-
       "You should probably try using a password manager like Proton Pass (my personal choice)",
-
-
     ],
 
-
     lastUpdated: "2024-12-06",
-
-
   },
 
-
   {
-
-
     id: "placeholders",
-
 
     question: "What embed placeholders can I use?",
 
-
     shortAnswer:
-
-
       "E-Z Host supports various dynamic placeholders for embeds to display file information that expand to the actual data every time the embed is loaded or the page is refreshed by the user.",
-
 
     category: "Embeds",
 
-
     sections: [
-
-
       {
-
-
         title: "Available Placeholders",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -560,19 +373,12 @@ Previous sessions will be logged out`,
 
 
   `,
-
-
       },
 
-
       {
-
-
         title: "Usage Example",
 
-
         type: "code",
-
 
         content: `
 
@@ -593,88 +399,46 @@ Storage used: {storage}
 
 
     `,
-
-
       },
 
-
       {
-
-
         title: "Important Notes",
-
 
         type: "warning",
 
-
         content:
-
-
           "Placeholders are case-sensitive and must be enclosed in curly braces. Invalid placeholders will not be replaced at all.",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: [],
 
-
     additionalNotes: [
-
-
       "Placeholders can be used in all embed fields",
-
 
       "Some placeholders may be blank if you have not configured them in your settings",
 
-
       "Both standard and premium users have access to all embeds",
-
-
     ],
 
-
     lastUpdated: "2024-12-01",
-
-
   },
 
-
-
-
-
   {
-
-
     id: "premium-features",
-
 
     question: "What do I get with premium?",
 
-
     shortAnswer:
-
-
       "E-Z Host and E-Z Bio offer a range of enhancements for premium users for a small fee. These include extra upload limits, a cool badge on your bio, special unicode characters in URLs, and more.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Premium Features",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -698,67 +462,37 @@ Donator badge on e-z.bio
 
 
 More coming soon!`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["features", "account-creation"],
 
-
     additionalNotes: [
-
-
       "Features may be subject to change",
-
 
       "A standard invite must be purchased before you can upgrade",
 
-
       "Standard users can access all aspects of our services, premium just provides more enhancements",
-
-
     ],
 
-
     lastUpdated: "2024-12-08",
-
-
   },
 
-
   {
-
-
     id: "public-domains",
-
 
     question: "Can I use more domains?",
 
-
     shortAnswer:
-
-
       "E-Z Host and E-Z Bio provide a range of public domains for you to use, free of charge. You can use them to share your files, shortened URLs, personal bio, or even donate your own domain!",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Wait, what?",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -773,70 +507,39 @@ More coming soon!`,
 
 
   And more!`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["features", "premium-features"],
 
-
     additionalNotes: [
-
-
       "Public domains are subject to expiration",
-
 
       "You can use any public domain for free, but they can also be donated privately",
 
-
       "Private domains will be for personal use, and public ones will be available for everyone to use",
 
-
       "See the full list of available public domains, or donate your own, on the dashboard",
-
-
     ],
 
-
     lastUpdated: "2024-12-09",
-
-
   },
 
-
   {
-
-
     id: "authentication",
-
 
     question: "How does authentication work on E-Z?",
 
-
     shortAnswer:
-
-
       "E-Z uses a token-based authentication system with refresh tokens stored in cookies and access tokens in memory. This system ensures secure and seamless access to our services.",
-
 
     category: "Account Management",
 
-
     sections: [
-
-
       {
-
-
         title: "Authentication Flow",
 
-
         type: "steps",
-
 
         content: `
 
@@ -854,19 +557,12 @@ More coming soon!`,
 
 
   5. Each refresh provides both a new access token and refresh token`,
-
-
       },
 
-
       {
-
-
         title: "Token Expiration without 'Remember Me'",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -875,19 +571,12 @@ More coming soon!`,
 
 
   Session ends immediately`,
-
-
       },
 
-
       {
-
-
         title: "Token Expiration with 'Remember Me'",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -899,19 +588,12 @@ More coming soon!`,
 
 
   Each site visit resets the 7-day timer`,
-
-
       },
 
-
       {
-
-
         title: "Security Notes",
 
-
         type: "warning",
-
 
         content: `
 
@@ -926,82 +608,46 @@ More coming soon!`,
 
 
   Enable 2FA for additional security`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["account-security", "password-reset"],
 
-
     additionalNotes: [
-
-
       "Tokens are encrypted and secure",
 
-
       "API requests require a valid API key, separate from access tokens",
-
-
     ],
 
-
     lastUpdated: "2024-12-10",
-
-
   },
 
-
   {
-
-
     id: "waves",
-
 
     question: "When is the next invite wave?",
 
-
     shortAnswer:
-
-
       "Invite waves are very rare and somewhat unscheduled. We will know of them no sooner than you will. Check the announcements channel on our Discord server to know when they happen.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Invite Wave Information",
 
-
         type: "text",
-
 
         content: `
 
 
       Invite waves are not scheduled and can happen at any time. We announce them on our Discord server. Make sure to check the announcements channel regularly.`,
-
-
       },
 
-
       {
-
-
         title: "How to Get Invites",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1013,19 +659,12 @@ More coming soon!`,
 
 
       Purchase an invite code from our website`,
-
-
       },
 
-
       {
-
-
         title: "Important Notes",
 
-
         type: "warning",
-
 
         content: `
 
@@ -1037,46 +676,25 @@ More coming soon!`,
 
 
       Each invite code is single-use only`,
-
-
       },
-
-
     ],
-
-
   },
 
-
   {
-
-
     id: "api-key",
-
 
     question: "Where can I find my API key?",
 
-
     shortAnswer:
-
-
       "You can find your API key on the dashboard. Look at the 'File settings' section and click the 'Copy API Key' button. This key is unique to you and should not be shared with anyone you don't trust.",
-
 
     category: "Account Management",
 
-
     sections: [
-
-
       {
-
-
         title: "Finding Your API Key",
 
-
         type: "steps",
-
 
         content: `
 
@@ -1094,19 +712,12 @@ More coming soon!`,
 
 
         `,
-
-
       },
 
-
       {
-
-
         title: "API Key Example",
 
-
         type: "code",
-
 
         content: `
 
@@ -1115,88 +726,47 @@ More coming soon!`,
 
 
         `,
-
-
       },
-
-
     ],
 
-
     images: [
-
-
       {
-
-
         url: "/assets/faq/api-key.png",
-
 
         alt: "Copy API key button",
 
-
         caption: "Where to find your API key",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["authentication"],
 
-
     additionalNotes: [
-
-
       "API keys are unique to each user and should never be shared",
-
 
       "API keys are needed for all API requests",
 
-
       "API keys can be regenerated if necessary, invalidating the old one",
-
-
     ],
 
-
     lastUpdated: "2024-12-12",
-
-
   },
 
-
   {
-
-
     id: "uploading-cursors",
-
 
     question: "How do I upload cursors?",
 
-
     shortAnswer:
-
-
       "E-Z Host supports uploading cursors in the .cur format, but .ico files work too. Make sure your cursor files are properly formatted before uploading and not just converted with an online tool.",
-
 
     category: "File Uploads",
 
-
     sections: [
-
-
       {
-
-
         title: "Supported Formats",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1205,37 +775,23 @@ More coming soon!`,
 
 
     .ico - Also supported but not recommended`,
-
-
       },
 
-
       {
-
-
         title: "Creating a Cursor File",
 
-
         type: "text",
-
 
         content: `
 
 
     Converting from an image to a cursor usually doesn't work well. It's recommended to use a site like https://www.cursor.cc to properly create a .cur file from an image.`,
-
-
       },
 
-
       {
-
-
         title: "Upload Steps",
 
-
         type: "steps",
-
 
         content: `
 
@@ -1250,133 +806,70 @@ More coming soon!`,
 
 
     4. Copy the provided link to share your cursor`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["file-uploads", "supported-formats"],
 
-
     additionalNotes: [
-
-
       "Ensure your cursor files are properly formatted before uploading",
 
-
       "Using .cur files provides better compatibility and performance",
-
-
     ],
 
-
     lastUpdated: "2024-12-16",
-
-
   },
 
-
   {
-
-
     id: "what-is-ezhost",
-
 
     question: "What is E-Z Host?",
 
-
     shortAnswer:
-
-
       "E-Z Host is a service that utilizes upload tools like ShareX to capture screenshots and video clips to instantly get a shareable link.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Overview",
 
-
         type: "text",
 
-
         content:
-
-
           "E-Z Host is designed to make sharing screenshots, video clips, and other files as quick and seamless as possible. It integrates with popular tools like ShareX to provide instant shareable links for your content.",
-
-
       },
-
 
       {
-
-
         title: "File Limits",
-
 
         type: "text",
 
-
         content:
-
-
           "Standard users can upload files up to 25MB, while premium users get 100MB per file. While there's no strict overall storage limit, users are expected to use the service reasonably and not as a drive storage solution.",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["features", "premium-features", "setup-instructions"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "setup-instructions",
-
 
     question: "How do I setup E-Z Host?",
 
-
     shortAnswer:
-
-
       "Setup instructions are available on the dashboard's settings page, with detailed tutorials for each supported platform.",
-
 
     category: "Getting Started",
 
-
     sections: [
-
-
       {
-
-
         title: "Platform Support",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1394,19 +887,12 @@ iOS
 
 
 Android`,
-
-
       },
 
-
       {
-
-
         title: "Setup Process",
 
-
         type: "steps",
-
 
         content: `
 
@@ -1421,52 +907,29 @@ Android`,
 
 
 4. Follow the platform-specific setup guide`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["what-is-ezhost", "features"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "what-is-ezbio",
-
 
     question: "What is E-Z Bio?",
 
-
     shortAnswer:
-
-
       "E-Z Bio is a biolink service that allows you to consolidate all your social media and other links in one customizable page.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Key Features",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1481,52 +944,29 @@ Easy to share single link
 
 
 Professional presentation`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["features", "premium-features"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "getting-access",
-
 
     question: "How do I get access?",
 
-
     shortAnswer:
-
-
       "Access to both E-Z Host and E-Z Bio is available for $3 through our store at store.e-z.gg",
-
 
     category: "Account Management",
 
-
     sections: [
-
-
       {
-
-
         title: "Purchase Steps",
 
-
         type: "steps",
-
 
         content: `
 
@@ -1541,67 +981,37 @@ Professional presentation`,
 
 
 4. Get instant access to both services`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["premium-features", "account-creation"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "storage-limits",
-
 
     question: "What are the upload and storage limits?",
 
-
     shortAnswer:
-
-
       "Standard users have a 25MB per-file limit, while premium users get 100MB per file. There's no strict total storage limit, but reasonable usage is expected.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "File Limits",
-
 
         type: "text",
 
-
         content: "Standard users: 25MB per file\nPremium users: 100MB per file",
-
-
       },
 
-
       {
-
-
         title: "Storage Policy",
 
-
         type: "warning",
-
 
         content: `
 
@@ -1616,52 +1026,29 @@ Professional presentation`,
 
 
 - Designed for quick file sharing, screenshots, and clips`,
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["premium-features", "what-is-ezhost"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "platform-support",
-
 
     question: "What platforms do you support?",
 
-
     shortAnswer:
-
-
       "E-Z Host supports all major platforms including Windows, MacOS, Linux, iOS, and Android.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Supported Platforms",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1679,70 +1066,38 @@ iOS
 
 
 Android`,
-
-
       },
 
-
       {
-
-
         title: "Setup Information",
-
 
         type: "note",
 
-
         content:
-
-
           "Each platform has its own dedicated setup guide available in the dashboard settings.",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["setup-instructions", "what-is-ezhost"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
 
-
   {
-
-
     id: "platform-support",
-
 
     question: "What platforms do you support?",
 
-
     shortAnswer:
-
-
       "E-Z Host supports all major platforms including Windows, MacOS, Linux, iOS, and Android.",
-
 
     category: "Services",
 
-
     sections: [
-
-
       {
-
-
         title: "Supported Platforms",
 
-
         type: "bullets",
-
 
         content: `
 
@@ -1760,38 +1115,21 @@ iOS
 
 
 Android`,
-
-
       },
 
-
       {
-
-
         title: "Setup Information",
-
 
         type: "note",
 
-
         content:
-
-
           "Each platform has its own dedicated setup guide available in the dashboard settings.",
-
-
       },
-
-
     ],
-
 
     relatedQuestions: ["setup-instructions", "what-is-ezhost"],
 
-
     lastUpdated: "2025-04-27",
-
-
   },
   {
     id: "official-sdks",
@@ -1801,94 +1139,40 @@ Android`,
     category: "Development",
     sections: [
       {
-        title: "Available API Wrappers",
+        title: "SDK Documentation",
+        type: "text",
+        content: `
+We provide official SDK libraries for several programming languages to make it easier to interact with our API. 
+
+Visit our [dedicated SDK documentation page](/docs/sdk) for detailed information about available SDKs, installation instructions, and usage examples.`,
+      },
+      {
+        title: "Available Languages",
         type: "bullets",
         content: `
-[.NET](https://github.com/e-z-services/e-z-dotnet) - Available now via NuGet
+[.NET](https://github.com/e-z-services/e-z-dotnet) - For .NET Core applications
+[JavaScript/TypeScript](https://github.com/q4ow/e-zhost-js) - For Node.js and browser environments
+[Python](https://github.com/e-z-services/e-z-py) - For Python 3.8+ applications
 [Golang](https://github.com/e-z-services/e-z-go) - Coming soon
-[JavaScript/TypeScript](https://github.com/q4ow/e-zhost-js) - Available now via npm
-[Python](https://github.com/e-z-services/e-z-py) - Available now via GitHub
 [Rust](https://github.com/e-z-services/e-z-rs) - Coming soon`,
       },
       {
-        title: "JavaScript API Wrapper Installation",
-        type: "code",
-        content: `
-pnpm add e-zhost-js # Recommended
-
-npm install e-zhost-js
-
-yarn add e-zhost-js`,
-      },
-      {
-        title: ".NET API Wrapper Installation",
-        type: "code",
-        content: `
-dotnet add package EZDotNet.Core
-dotnet add package EZDotNet.Services`,
-      },
-      {
-        title: "Python API Wrapper Installation",
-        type: "code",
-        content: `
-# Clone from GitHub repository
-git clone https://github.com/e-z-services/e-z-py
-# No installation needed - import directly from the cloned repository`,
-      },
-      {
-        title: "Python Usage Example",
-        type: "code",
-        content: `
-from ez_api import EZ_API
-
-api = EZ_API("YOUR_API_KEY")
-
-# Upload a file
-upload = api.upload("path/to/file.png")
-print("Uploaded Image:", upload.image_url)
-
-# Shorten a URL
-shorten = api.shorten_url("https://example.com")
-print("Shortened URL:", shorten.short_url)
-
-# Create a paste
-paste = api.paste(
-    title="Example Paste",
-    description="A simple example",
-    content="print('Hello, World!')",
-    language="python"
-)
-print("Paste URL:", paste.paste_url)`,
-      },
-      {
-        title: "JS Usage Example",
-        type: "code",
-        content: `
-import { EZHostSDK } from 'e-zhost-js';
-
-const client = new EZHostSDK('YOUR_API_KEY');
-
-async function uploadFile(filePath) {
-  try {
-    const result = await client.upload(filePath);
-    console.log('File uploaded successfully:', result.url);
-  } catch (error) {
-    console.error('Upload failed:', error);
-  }
-}`,
-      },
-      {
-        title: "API Wrapper Benefits",
+        title: "Benefits of Using SDKs",
         type: "text",
         content: `
-The official API wrappers provide a more convenient way to interact with the E-Z Host API compared to making raw HTTP requests. They handle authentication, request formatting, error handling, and provide a more intuitive interface for developers.`,
+The official SDKs provide several advantages over direct API usage:
+
+- Simplified authentication and request handling
+- Type safety and code completion in supported IDEs
+- Standardized error handling
+- Built-in utilities for common operations
+
+For complete documentation and examples, visit the [SDK Documentation](/docs/sdk) page.`,
       },
     ],
     relatedQuestions: ["api-key", "authentication"],
     additionalNotes: [
-      "The Python wrapper is currently only available via GitHub, not PyPI",
-      ".NET wrapper only supports .NET Core 8 & 9",
-      "API documentation is available too for those who prefer to use the REST API directly"
+      "For those who prefer direct API access, refer to our [API Documentation](/docs/api)",
     ],
     lastUpdated: "2025-05-05",
   },

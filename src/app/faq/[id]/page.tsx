@@ -65,17 +65,17 @@ export async function generateMetadata({
 
 function parseMarkdownLinks(text: string) {
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  
+
   const parts = text.split(linkRegex);
   const result = [];
-  
+
   for (let i = 0; i < parts.length; i++) {
     if (i % 3 === 0) {
       result.push(<span key={`text-${i}`}>{parts[i]}</span>);
     } else if (i % 3 === 1) {
       const linkText = parts[i];
       const linkUrl = parts[i + 1];
-      
+
       result.push(
         <a
           key={`link-${i}`}
@@ -85,12 +85,12 @@ function parseMarkdownLinks(text: string) {
           rel="noopener noreferrer"
         >
           {linkText}
-        </a>
+        </a>,
       );
       i++;
     }
   }
-  
+
   return result;
 }
 
@@ -102,7 +102,7 @@ function SectionContent({ content, type }: { content: string; type?: string }) {
       <div className="space-y-2">
         {formattedContent.split("\n").map((item, index) => {
           const cleanedItem = item.replace(/^[-\d]+\.\s*/, "").trim();
-          
+
           return (
             <div key={index} className="flex items-start gap-2">
               <span className="text-blue-400">

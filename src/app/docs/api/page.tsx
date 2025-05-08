@@ -144,6 +144,16 @@ export default function ApiDocs() {
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="text-gray-300">
+                  • Use our{" "}
+                  <Link
+                    href="/docs/sdk"
+                    className="text-purple-400 hover:text-purple-300"
+                  >
+                    official SDK libraries
+                  </Link>{" "}
+                  for your preferred language
+                </li>
+                <li className="text-gray-300">
                   • Ask our{" "}
                   <a
                     href="https://discord.gg/ez"

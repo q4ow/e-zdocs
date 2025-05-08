@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Code, Star } from "lucide-react";
+import { ArrowRight, Code, Star, Package } from "lucide-react";
 import { FeatureCard } from "@/components/home/feature-card";
 import { StatCard } from "@/components/home/stat-card";
 import { useRef, useState, useEffect, memo } from "react";
@@ -110,6 +110,7 @@ const Home = () => {
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  className="flex flex-row gap-2"
                 >
                   <Link
                     href="/docs/api"
@@ -118,6 +119,14 @@ const Home = () => {
                   >
                     API Documentation
                     <Code className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href="/docs/sdk"
+                    className="rounded-lg px-6 py-3 text-sm font-semibold text-blue-400 ring-1 ring-blue-400/20 flex items-center justify-center gap-2 hover:ring-blue-400/40"
+                    aria-label="SDK Libraries"
+                  >
+                    SDK Libraries
+                    <Package className="w-4 h-4" />
                   </Link>
                 </motion.div>
               </motion.div>

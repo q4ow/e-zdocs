@@ -38,8 +38,7 @@ export const featuredBios = [
   },
   {
     username: "Rage",
-    image:
-      "https://hentai.expert/vhtjb8ry.png",
+    image: "https://hentai.expert/vhtjb8ry.png",
     bioLink: "https://e-z.bio/0",
     socialCount: "4264",
     primaryPlatform: <Eye className="w-4 h-4" />,
@@ -78,16 +77,14 @@ export const featuredBios = [
   },
   {
     username: "Keiran",
-    image:
-      "https://hentai.expert/kixqpi7l.png",
+    image: "https://hentai.expert/kixqpi7l.png",
     bioLink: "https://e-z.bio/tty",
     socialCount: "947",
     primaryPlatform: <Eye className="w-4 h-4" />,
   },
   {
     username: "Robin",
-    image:
-      "https://hentai.expert/s5lglelq.png",
+    image: "https://hentai.expert/s5lglelq.png",
     bioLink: "https://e-z.bio/robintt",
     socialCount: "198",
     primaryPlatform: <Eye className="w-4 h-4" />,
