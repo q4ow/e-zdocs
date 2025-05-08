@@ -113,7 +113,7 @@ The official API wrappers provide a more convenient way to interact with the E-Z
     relatedQuestions: ["api-key", "authentication"],
     additionalNotes: [
       "The Python wrapper is currently only available via GitHub, not PyPI",
-      ".NET wrapper supports both .NET Core and .NET Framework applications",
+      ".NET wrapper only supports .NET Core 8 & 9",
       "API documentation is available too for those who prefer to use the REST API directly"
     ],
     lastUpdated: "2025-05-05",
