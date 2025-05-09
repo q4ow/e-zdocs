@@ -59,23 +59,16 @@ async function uploadFile(filePath) {
     repository: "https://github.com/e-z-services/e-z-dotnet",
     packageManager: "NuGet",
     installCommand: `dotnet add package EZDotNet.Core
+// ASP.Net Extension
 dotnet add package EZDotNet.Services`,
-    usageExample: `using EZDotNet.Core;
-using EZDotNet.Services;
-
-// Initialize the client
-var client = new EZHostClient("YOUR_API_KEY");
-
-// Upload a file
-try
-{
-    var result = await client.UploadAsync("path/to/file.png");
-    Console.WriteLine($"File uploaded: {result.Url}");
-}
-catch (EZHostException ex)
-{
-    Console.WriteLine($"Error: {ex.Message}");
-}`,
+    usageExample: `var client = new EZServicesClient(new EZServicesOptions { ApiKey = "your-api-key" });
+// Upload a file 
+var fileResponse = await client.Files.UploadFileFromPathAsync("path/to/file.png");
+// Create short URL 
+var urlResponse = await client.Shortener.CreateShortUrlAsync("https://example.com");
+// Create paste 
+var pasteResponse = await client.Paste.CreatePasteAsync(new PasteCreateRequest { Title = "Title!", Description = "Description!", Text = "Hello World", Language = PasteLanguage.CSharp });
+    `,
   },
   {
     language: "Python",
